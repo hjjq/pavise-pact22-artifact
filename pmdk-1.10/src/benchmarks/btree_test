@@ -1,0 +1,24 @@
+map_insert [1]
+total-avg[sec];ops-per-second[1/sec];total-max[sec];total-min[sec];total-median[sec];total-std-dev[sec];latency-avg[nsec];latency-min[nsec];latency-max[nsec];latency-std-dev[nsec];latency-pctl-50.0%[nsec];latency-pctl-99.0%[nsec];latency-pctl-99.9%[nsec];threads;ops-per-thread;data-size;seed;repeats;thread-affinity;main-affinity;min-exe-time;type;seed;max-key;external-tx;alloc
+
+
+===================== Enhanced by Pavise ====================
+
+
+
+!!! Running pavise isca 22
+
+len = 61440000, parity_row_size = 614400, parity_num_rows = 100
+pavise_mmap called: addr = 0x10000000000, fd = 4, length = 61440000, offset = 0
+input to mmap is  0x30000000000
+returning 0x30000000000
+pavise_mmap called: addr = 0, fd = 4, length = 4096, offset = 0
+returning SHADOW_BASE for part
+pavise_munmap called: addr = 0x30000000000, length = 4096
+pavise_munmap called: addr = 0x30000000000, length = 61440000
+pavise_munmap calling pavise_redo_process, size of redo_list = 9
+redoapply = 0, parity = 0, prep = 0, discard = 0, header = 0
+#s=0#f=0#end
+pages allocated = 942, checksums computed = 0
+unmapping 0x30000000000
+0.084356;118545.728890;0.084356;0.084356;0.084356;0.000000;8456;3324;13585259;135890.209055;4428;26161;35130;1;10000;256;0;1;false;-1;0;btree;2499481249;0;false;false
