@@ -13,8 +13,7 @@ export pushd popd
 echo "======================================="
 echo "Preproducing Pavise ignore list results"
 # Edit PMDK user.mk to use Pavise conservative tracking pass
-printf "CC=clang
-CXX=clang++
+printf "CC=clang CXX=clang++
 EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload" > $PAVISE_ROOT/pmdk-1.10/user.mk
 # Recompile PMDK with new pass
 echo "Recompiling PMDK with new pass..."
@@ -59,3 +58,29 @@ pushd $PAVISE_ROOT/pmdk-1.10/src/benchmarks
 source pact22_repro_microbench_conservative.sh
 popd
 
+
+### Preproduce PMDK without Pavise results
+echo "============================================="
+echo "Preproducing Pavise conservative list results"
+# Edit PMDK user.mk to use Pavise conservative tracking pass
+printf "CC=clang
+CXX=clang++
+EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager" > $PAVISE_ROOT/pmdk-1.10-no_pavise/user.mk
+# Modify LD_LIBRARY_PATH to use PMDK without Pavise
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10-no_pavise/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10-no_pavise/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+# Recompile PMDK with new pass
+echo "Recompiling PMDK with new pass" 
+pushd $PAVISE_ROOT/pmdk-1.10-no_pavise
+make clean -j &> /dev/null
+make -j &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! PMDK build failed." 
+    exit 1
+fi
+popd 
+## Run microbenchmarks
+echo "Running microbenchmarks with conservative tracking"
+pushd $PAVISE_ROOT/pmdk-1.10-no_pavise/src/benchmarks
+source pact22_repro_microbench_pmdk.sh
+popd
