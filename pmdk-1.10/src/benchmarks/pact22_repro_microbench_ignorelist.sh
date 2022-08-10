@@ -1,11 +1,8 @@
 #!/bin/bash
 
 
-# make sure to change the make target accordingly based on the type of evaluation: 
-# (make a_err_inj_eval|a_runtime_eval)
-
-dir_name="pact22_artifact_eval_repro"
-csv_name="pact22_artifact_eval_repro"
+dir_name="pact22_artifact_eval_repro_ignorelist"
+csv_name="pact22_artifact_eval_repro_ignorelist"
 iters=1
 let iters_minus_1=$iters-1 # minus 1 because we start from 0
 
