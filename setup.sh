@@ -8,9 +8,12 @@ export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/li
 export PATH=/ssd1/llvm-project/build/bin:$PATH
 
 
-echo "PAVISE_ROOT = $PAVISE_ROOT"
-echo "PMEM_MMAP_HINT = $PMEM_MMAP_HINT"
-echo "PAVISE_LLVM_ROOT = $PAVISE_LLVM_ROOT"
-echo "LD_LIBRARY_PATH = $LD_LIBRARY_PATH"
-echo "PATH = $PATH"
+#echo "PAVISE_ROOT = $PAVISE_ROOT"
+#echo "PMEM_MMAP_HINT = $PMEM_MMAP_HINT"
+#echo "PAVISE_LLVM_ROOT = $PAVISE_LLVM_ROOT"
+#echo "LD_LIBRARY_PATH = $LD_LIBRARY_PATH"
+#echo "PATH = $PATH"
 
+
+# Edit file paths in whitelist
+sed "s@PAVISE_ROOT@$PAVISE_ROOT@g" llvm/llvmlog_template > llvm/llvmlog
