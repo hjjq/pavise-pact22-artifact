@@ -952,10 +952,10 @@ int pavise_verify_recover(void* check_addr, bool force){
         //return 1;
         //mismatch_addr.insert((void*) check_addr);
         // comment out mismatch print for naive implementation
-        //std::cout << "2Checksum mismatch at " << (void*) check_addr << " detected. Old csum ="
-        //    << e->chksum << ", new csum = " << chksum << ". Attempting to recover...\n";
+        std::cout << "2Checksum mismatch at " << (void*) check_addr << " detected. Old csum ="
+            << e->chksum << ", new csum = " << chksum << ". Attempting to recover...\n";
         //std::cout << "!!!!!!mismatch addresses = " << mismatch_addr.size() << std::endl;
-        //passert(0);
+        passert(0);
 #ifdef PAVISE_RUNTIME_EVAL
         return 1;
 #endif
