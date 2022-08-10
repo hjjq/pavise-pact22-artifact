@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcores.a CMakeFiles/cores.dir/core/os_thread_posix.c.o CMakeFiles/cores.dir/core/os_posix.c.o CMakeFiles/cores.dir/core/util_posix.c.o CMakeFiles/cores.dir/core/cpu.c.o CMakeFiles/cores.dir/core/membuf.c.o CMakeFiles/cores.dir/core/out.c.o CMakeFiles/cores.dir/core/util.c.o CMakeFiles/cores.dir/core/ringbuf.c.o
+/usr/bin/ranlib libcores.a
