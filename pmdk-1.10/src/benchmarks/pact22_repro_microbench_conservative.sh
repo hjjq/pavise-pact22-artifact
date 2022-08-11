@@ -2,7 +2,7 @@
 
 
 dir_name="pact22_artifact_eval_conservative"
-csv_name="pact22_artifact_eval_conservative"
+csv_name="pavise_conservative_microbench"
 iters=1
 let iters_minus_1=$iters-1 # minus 1 because we start from 0
 
@@ -35,3 +35,4 @@ for bench in hashmap_atomic hashmap_tx ctree btree rbtree rtree; do
     done
 done
 
+cp ${dir_name}/${csv_name}.csv $PAVISE_ROOT/results

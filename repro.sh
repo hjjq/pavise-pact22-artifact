@@ -67,6 +67,7 @@ then
     echo "ERROR! PMDK build failed." 
     exit 1
 fi
+echo "Pavise compilation finished successfully."
 popd 
 ## Run microbenchmarks
 echo "Running microbenchmarks with conservative tracking"
@@ -94,9 +95,13 @@ then
     echo "ERROR! PMDK build failed." 
     exit 1
 fi
+echo "Pavise compilation finished successfully."
 popd 
 ## Run microbenchmarks
 echo "Running microbenchmarks with conservative tracking"
 pushd $PAVISE_ROOT/pmdk-1.10-no_pavise/src/benchmarks
 source pact22_repro_microbench_pmdk.sh
 popd
+
+echo "\n"
+echo "Finished reproducing microbenchmarks. Results are stored in $PAVISE_ROOT/results"
