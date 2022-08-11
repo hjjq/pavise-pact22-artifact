@@ -62,7 +62,7 @@ echo "Preproducing Pavise conservative list results"
 printf "CC=clang
 CXX=clang++
 EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
-# Modify LD_LIBRARY_PATH to use PMDK without Pavise
+# Modify LD_LIBRARY_PATH 
 export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10-no_pavise/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
 # Recompile PMDK with new pass
 echo "Recompiling PMDK with new pass... (~3 min)"
