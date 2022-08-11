@@ -1,16 +1,9 @@
 # pavise
 Priority data protection for Persistent Memory programs and libraries
 
-## Setting env
+To reproduce:
 ```
 source setup.sh
+source repro.sh
 ```
-## Build Pavise
-```
-make a_runtime_eval
-```
-## Build PMDK
-```
-cd pmdk-1.10
-make -j
-```
+Results are placed in ./results
