@@ -13,10 +13,10 @@ export pushd popd
 echo "======================================="
 echo "Compiling ISA-L."
 cd $PAVISE_ROOT/isa-l
-./autogen.sh > /dev/null
+./autogen.sh &> /dev/null
 ./configure --prefix=$PAVISE_ROOT/isa-l --libdir=$PAVISE_ROOT/isa-l/lib &> /dev/null
-make > /dev/null
-make install > /dev/null
+make &> /dev/null
+make install &> /dev/null
 if [ $? -ne 0 ]; 
 then 
     echo "ERROR! ISA-L build failed." 
@@ -29,7 +29,7 @@ popd
 echo "======================================="
 echo "Compiling Pavise shared library."
 pushd $PAVISE_ROOT
-make a_runtime_eval > /dev/null
+make a_runtime_eval &> /dev/null
 if [ $? -ne 0 ]; 
 then 
     echo "ERROR! Pavise build failed." 
@@ -163,7 +163,7 @@ echo "Recompiling pmem-valgrind..."
 pushd $PAVISE_ROOT/apps/mod-pavise/pmem-valgrind
 ./autogen.sh
 ./configure
-make -j > /dev/null
+make -j &> /dev/null
 if [ $? -ne 0 ]; 
 then 
     echo "ERROR! PMDK build failed." 
@@ -186,8 +186,8 @@ echo "vacation compilation finished successfully."
 popd
 ### Run vacation
 echo "Running vacation with ignore list"
-pushd $PAVISE_ROOT/apps/mod-pavise/vacation-pmdk 
+pushd $PAVISE_ROOT/apps/mod-pavise/vacation-pmdk/build
 rm -rf /pmem0p1/kevin/pools/*
 ./vacation /pmem0p1/kevin/pools/vacation -r100000 -t200000 -n1 -q55 -u99 &> $PAVISE_ROOT/results/vacation_ignorelist
+echo "Finished running vacation."
 popd
-
