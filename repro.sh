@@ -12,7 +12,7 @@ export pushd popd
 ### Compile ISA-L
 echo "======================================="
 echo "Compiling ISA-L."
-cd $PAVISE_ROOT/isa-l
+pushd $PAVISE_ROOT/isa-l
 ./autogen.sh &> /dev/null
 ./configure --prefix=$PAVISE_ROOT/isa-l --libdir=$PAVISE_ROOT/isa-l/lib &> /dev/null
 make &> /dev/null
@@ -160,8 +160,8 @@ popd
 ### Build pmem-valgrind
 echo "Recompiling pmem-valgrind..."
 pushd $PAVISE_ROOT/apps/mod-pavise/pmem-valgrind
-./autogen.sh
-./configure
+./autogen.sh &> /dev/null
+./configure &> /dev/null
 make -j &> /dev/null
 if [ $? -ne 0 ]; 
 then 
@@ -201,7 +201,7 @@ printf "CC=clang
 CXX=clang++
 EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
 # Modify LD_LIBRARY_PATH 
-export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10-no_pavise/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
 ### Recompile PMDK with new pass
 echo "Recompiling PMDK with new pass... (~3 min)"
 pushd $PAVISE_ROOT/pmdk-1.10
@@ -228,8 +228,8 @@ popd
 ### Build pmem-valgrind
 echo "Recompiling pmem-valgrind..."
 pushd $PAVISE_ROOT/apps/mod-pavise/pmem-valgrind
-./autogen.sh
-./configure
+./autogen.sh &> /dev/null
+./configure &> /dev/null
 make -j &> /dev/null
 if [ $? -ne 0 ]; 
 then 
