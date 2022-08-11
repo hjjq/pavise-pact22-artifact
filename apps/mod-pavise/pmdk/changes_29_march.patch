@@ -1,0 +1,372 @@
+diff --git a/src/common/mmap_posix.c b/src/common/mmap_posix.c
+index 7acacef79..ba6b6eb5b 100644
+--- a/src/common/mmap_posix.c
++++ b/src/common/mmap_posix.c
+@@ -207,18 +207,19 @@ util_map_sync(void *addr, size_t len, int proto, int flags, int fd,
+ 	if (ret != MAP_FAILED) {
+ 		LOG(4, "mmap with MAP_SYNC succeeded");
+ 		*map_sync = 1;
++        /* THIS DOES NOT WORK WITH POOLS
+         if ((long)addr == 0x10000000000) { 
+-            /* Pre-faultin all pages */
++            // Pre-faultin all pages
+             long ctr = 0;
+             char* flush_addr = (char*) ret;
+-            for (unsigned long i = 0; i < len; i += 4096) {
++            for (unsigned long i = 4096*10; i < len; i += 4096) {
+                 // Has to be a write to ensure pages are faulted-in, instead of dummy 
+                 // zero page being used.
+                 flush_addr[i] = 0;
+                 ctr++;
+             }
+             printf("Pre-faultin %lu pages for size:%lu\n", ctr, len);
+-        }
++        }*/
+         return ret;
+ 	}
+ 
+diff --git a/src/include/libpmemobj/tx.h b/src/include/libpmemobj/tx.h
+index bb43993f4..0aa09225a 100644
+--- a/src/include/libpmemobj/tx.h
++++ b/src/include/libpmemobj/tx.h
+@@ -47,6 +47,8 @@
+ extern "C" {
+ #endif
+ 
++void report_mem_usage(void);
++
+ #ifdef POBJ_TX_CRASH_ON_NO_ONABORT
+ #define TX_ONABORT_CHECK do {\
+ 		if (_stage == TX_STAGE_ONABORT)\
+@@ -86,7 +88,7 @@ _pobj_validate_cb_sig(pmemobj_tx_callback cb)
+ #define NOTX_SET_DIRECT(p, field, value) (\
+ 	(p)->field = (value))
+ 
+-//#define PMEM_NO_LOGGING 1
++//#define PMEM_NO_LOGGING 0
+ 
+ #ifdef PMEM_NO_LOGGING
+ 
+diff --git a/src/libpmemobj/libpmemobj.map b/src/libpmemobj/libpmemobj.map
+index 08b2f42a3..53782d0c3 100644
+--- a/src/libpmemobj/libpmemobj.map
++++ b/src/libpmemobj/libpmemobj.map
+@@ -126,6 +126,7 @@ LIBPMEMOBJ_1.0 {
+ 		_pobj_cached_pool;
+ 		_pobj_cache_invalidate;
+ 		_pobj_debug_notice;
++        report_mem_usage;
+ 	local:
+ 		*;
+ };
+diff --git a/src/libpmemobj/palloc.c b/src/libpmemobj/palloc.c
+index eabf4e1b2..c21f17113 100644
+--- a/src/libpmemobj/palloc.c
++++ b/src/libpmemobj/palloc.c
+@@ -99,6 +99,12 @@ struct pobj_action_internal {
+ 	};
+ };
+ 
++static uint64_t size_allocated = 0;
++
++void palloc_status() {
++   printf("Requested:%lu KB\n", size_allocated/1024); 
++}
++
+ /*
+  * palloc_set_value -- creates a new set memory action
+  */
+@@ -546,6 +552,7 @@ palloc_reserve(struct palloc_heap *heap, size_t size,
+ 	uint64_t extra_field, uint16_t object_flags, uint16_t class_id,
+ 	struct pobj_action *act)
+ {
++    size_allocated += size;
+ 	COMPILE_ERROR_ON(sizeof(struct pobj_action) !=
+ 		sizeof(struct pobj_action_internal));
+ 
+diff --git a/src/libpmemobj/palloc.h b/src/libpmemobj/palloc.h
+index d37ce8dca..d1a892012 100644
+--- a/src/libpmemobj/palloc.h
++++ b/src/libpmemobj/palloc.h
+@@ -72,6 +72,8 @@ struct memory_block;
+ typedef int (*palloc_constr)(void *base, void *ptr,
+ 		size_t usable_size, void *arg);
+ 
++void palloc_status(void);
++
+ int palloc_operation(struct palloc_heap *heap, uint64_t off, uint64_t *dest_off,
+ 	size_t size, palloc_constr constructor, void *arg,
+ 	uint64_t extra_field, uint16_t object_flags, uint16_t class_id,
+diff --git a/src/libpmemobj/tx.c b/src/libpmemobj/tx.c
+index 907c53e7f..f35c75a34 100644
+--- a/src/libpmemobj/tx.c
++++ b/src/libpmemobj/tx.c
+@@ -46,6 +46,12 @@
+ #include "valgrind_internal.h"
+ #include "memops.h"
+ 
++//#define PMDK_NO_TX
++
++void report_mem_usage() {
++   palloc_status(); 
++}
++
+ struct tx_data {
+ 	SLIST_ENTRY(tx_data) tx_entry;
+ 	jmp_buf env;
+@@ -108,6 +114,7 @@ struct tx_range_def {
+ 	uint64_t flags;
+ };
+ 
++#ifndef PMDK_NO_TX
+ /*
+  * tx_range_def_cmp -- compares two snapshot ranges
+  */
+@@ -124,6 +131,7 @@ tx_range_def_cmp(const void *lhs, const void *rhs)
+ 
+ 	return 0;
+ }
++#endif // PMDK_NO_TX
+ 
+ /*
+  * tx_params_new -- creates a new transactional parameters instance and fills it
+@@ -393,6 +401,7 @@ tx_abort_set(PMEMobjpool *pop, struct lane *lane)
+ 	operation_finish(lane->undo);
+ }
+ 
++#ifndef PMDK_NO_TX
+ /*
+  * tx_flush_range -- (internal) flush one range
+  */
+@@ -408,6 +417,7 @@ tx_flush_range(void *data, void *ctx)
+ 	VALGRIND_REMOVE_FROM_TX(OBJ_OFF_TO_PTR(pop, range->offset),
+ 		range->size);
+ }
++#endif // PMDK_NO_TX
+ 
+ /*
+  * tx_clean_range -- (internal) clean one range
+@@ -430,8 +440,10 @@ tx_pre_commit(struct tx *tx)
+ {
+ 	LOG(5, NULL);
+ 
++#ifndef PMDK_NO_TX
+ 	/* Flush all regions and destroy the whole tree. */
+ 	ravl_delete_cb(tx->ranges, tx_flush_range, tx->pop);
++#endif
+ 	tx->ranges = NULL;
+ }
+ 
+@@ -556,12 +568,13 @@ tx_lane_ranges_insert_def(PMEMobjpool *pop, struct tx *tx,
+ {
+ 	LOG(3, "rdef->offset %"PRIu64" rdef->size %"PRIu64,
+ 		rdef->offset, rdef->size);
+-
++#ifndef PMDK_NO_TX
+ 	int ret = ravl_emplace_copy(tx->ranges, rdef);
+ 	if (ret == EEXIST)
+ 		FATAL("invalid state of ranges tree");
+-
+-	return ret;
++    return ret;
++#endif
++    return 0;
+ }
+ 
+ /*
+@@ -688,9 +701,10 @@ pmemobj_tx_begin(PMEMobjpool *pop, jmp_buf env, ...)
+ 		SLIST_INIT(&tx->tx_entries);
+ 		SLIST_INIT(&tx->tx_locks);
+ 
++#ifndef PMDK_NO_TX
+ 		tx->ranges = ravl_new_sized(tx_range_def_cmp,
+ 			sizeof(struct tx_range_def));
+-
++#endif
+ 		tx->pop = pop;
+ 
+ 		tx->first_snapshot = 1;
+@@ -1012,6 +1026,7 @@ pmemobj_tx_process(void)
+ 	}
+ }
+ 
++#ifndef PMDK_NO_TX
+ /*
+  * vg_verify_initialized -- when executed under Valgrind verifies that
+  *   the buffer has been initialized; explicit check at snapshotting time,
+@@ -1044,7 +1059,9 @@ vg_verify_initialized(PMEMobjpool *pop, const struct tx_range_def *def)
+ 	}
+ #endif
+ }
++#endif // PMDK_NO_TX
+ 
++#ifndef PMDK_NO_TX
+ /*
+  * pmemobj_tx_add_snapshot -- (internal) creates a variably sized snapshot
+  */
+@@ -1082,6 +1099,7 @@ pmemobj_tx_add_snapshot(struct tx *tx, struct tx_range_def *snapshot)
+ 	return operation_add_buffer(tx->lane->undo, ptr, ptr, snapshot->size,
+ 		ULOG_OPERATION_BUF_CPY);
+ }
++#endif // PMDK_NO_TX
+ 
+ /*
+  * pmemobj_tx_add_common -- (internal) common code for adding persistent memory
+@@ -1090,6 +1108,7 @@ pmemobj_tx_add_snapshot(struct tx *tx, struct tx_range_def *snapshot)
+ static int
+ pmemobj_tx_add_common(struct tx *tx, struct tx_range_def *args)
+ {
++#ifndef PMDK_NO_TX
+ 	LOG(15, NULL);
+ 
+ 	if (args->size > PMEMOBJ_MAX_ALLOC_SIZE) {
+@@ -1240,7 +1259,7 @@ pmemobj_tx_add_common(struct tx *tx, struct tx_range_def *args)
+ 		ERR("out of memory");
+ 		return obj_tx_abort_err(ENOMEM);
+ 	}
+-
++#endif // PMDK_NO_TX
+ 	return 0;
+ }
+ 
+@@ -1636,6 +1655,7 @@ pmemobj_tx_free(PMEMoid oid)
+ 
+ 	PMEMOBJ_API_START();
+ 
++#ifndef PMDK_NO_TX
+ 	struct pobj_action *action;
+ 
+ 	struct tx_range_def range = {oid.off, 0, 0};
+@@ -1669,8 +1689,8 @@ pmemobj_tx_free(PMEMoid oid)
+ 		PMEMOBJ_API_END();
+ 		return ret;
+ 	}
+-
+ 	palloc_defer_free(&pop->heap, oid.off, action);
++#endif // PMDK_NO_TX
+ 
+ 	PMEMOBJ_API_END();
+ 	return 0;
+diff --git a/src/libpmemobj/tx.h b/src/libpmemobj/tx.h
+index ccca2e42d..9f8f9db01 100644
+--- a/src/libpmemobj/tx.h
++++ b/src/libpmemobj/tx.h
+@@ -45,6 +45,8 @@
+ extern "C" {
+ #endif
+ 
++void report_mem_usage(void);
++
+ #define TX_DEFAULT_RANGE_CACHE_SIZE (1 << 15)
+ #define TX_DEFAULT_RANGE_CACHE_THRESHOLD (1 << 12)
+ 
+diff --git a/src/queue_tx.sh b/src/queue_tx.sh
+index 44381de64..6cbedcbd5 100644
+--- a/src/queue_tx.sh
++++ b/src/queue_tx.sh
+@@ -1,7 +1,10 @@
++#!/bin/bash
++shopt -s expand_aliases
++source ~/.bashrc
+ source source.sh
+ rm -rf /mnt/ext4-pmem22/queue.pool 
+ ./tools/pmempool/pmempool create obj /mnt/ext4-pmem22/queue.pool --layout queue --size 1GB
+ ./examples/libpmemobj/queue/queue /mnt/ext4-pmem22/queue.pool 1 new 1000000
+-taskset 0x100 ./examples/libpmemobj/queue/queue /mnt/ext4-pmem22/queue.pool 1000000 enqueue hello
++./examples/libpmemobj/queue/queue /mnt/ext4-pmem22/queue.pool 1000000 enqueue hello
+ sleep 2
+ taskset 0x100 ./examples/libpmemobj/queue/queue /mnt/ext4-pmem22/queue.pool 1000000 dequeue
+diff --git a/src/run_benchmarks.sh b/src/run_benchmarks.sh
+index 8091dda8e..3c36ddf74 100644
+--- a/src/run_benchmarks.sh
++++ b/src/run_benchmarks.sh
+@@ -3,11 +3,12 @@
+ DATASIZE=64
+ OPERATIONS=1000000
+ MAP_OPERATIONS=( map_insert map_remove map_get )
+-MAP_TYPES=( rbtree btree hashmap_tx ) #rbtree_notx btree_notx hashmap_notx )
++MAP_TX_TYPES=( rbtree btree hashmap_tx )
++MAP_NOTX_TYPES=( rbtree_notx btree_notx hashmap_notx )
+ 
+ init_environment () {
+     export PMEM_IS_PMEM_FORCE=1
+-    export PMEM_NO_FLUSH=1
++    export PMEM_NO_MOVNT=1
+     source source.sh
+ }
+ 
+@@ -47,9 +48,12 @@ run_queue_benchmark () {
+     taskset 0x100 ./examples/libpmemobj/queue/$1 /mnt/ext4-pmem22/queue.pool 1000000 dequeue
+ }
+ 
++{
++export PMEM_NO_FLUSH=0
++export PMEM_NO_FENCE=0
+ init_environment
+ echo " ************** RUNNING MAP BENCHMARKS ********************"
+-for impl in "${MAP_TYPES[@]}"
++for impl in "${MAP_TX_TYPES[@]}"
+ do
+     for op in "${MAP_OPERATIONS[@]}"
+     do
+@@ -61,8 +65,51 @@ done
+ 
+ echo " ************** RUNNING LIST BENCHMARKS ********************"
+ run_list_benchmark fifo
+-#run_list_benchmark fifo_notx
+ 
+ echo " ************** RUNNING QUEUE BENCHMARKS ********************"
+ run_queue_benchmark queue
+-#run_queue_benchmark queue_notx
++} > baseline.log 2>baseline.log
++
++
++{
++export PMEM_NO_FLUSH=1
++export PMEM_NO_FENCE=1
++echo " ************** RUNNING MAP BENCHMARKS ********************"
++for impl in "${MAP_TX_TYPES[@]}"
++do
++    for op in "${MAP_OPERATIONS[@]}"
++    do
++        run_map_benchmark $op $impl
++        echo ""
++        echo ""
++    done
++done
++
++echo " ************** RUNNING LIST BENCHMARKS ********************"
++run_list_benchmark fifo
++
++echo " ************** RUNNING QUEUE BENCHMARKS ********************"
++run_queue_benchmark queue
++} > no_flush_no_fence.log 2>no_flush_no_fence.log
++
++
++{
++export PMEM_NO_FLUSH=1
++export PMEM_NO_FENCE=1
++echo " ************** RUNNING MAP BENCHMARKS ********************"
++for impl in "${MAP_NOTX_TYPES[@]}"
++do
++    for op in "${MAP_OPERATIONS[@]}"
++    do
++        run_map_benchmark $op $impl
++        echo ""
++        echo ""
++    done
++done
++
++echo " ************** RUNNING LIST BENCHMARKS ********************"
++run_list_benchmark fifo_notx
++
++echo " ************** RUNNING QUEUE BENCHMARKS ********************"
++run_queue_benchmark queue_notx
++} > no_tx.log 2>no_tx.log
+diff --git a/src/source.sh b/src/source.sh
+index beb30e750..c9c43bd92 100644
+--- a/src/source.sh
++++ b/src/source.sh
+@@ -1 +1 @@
+-export LD_LIBRARY_PATH=/home/swapnilh/pmdk-stuff/pmdk/src/nondebug/:$LD_LIBRARY_PATH
++export LD_LIBRARY_PATH=/home/swapnilh/pmdk-stuff/pmdk/src/tx-nondebug/:$LD_LIBRARY_PATH

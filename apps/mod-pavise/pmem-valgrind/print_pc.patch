@@ -1,0 +1,101 @@
+diff --git a/lackey/lk_main.c b/lackey/lk_main.c
+index 4c2ad9f3e..2eea6b69b 100644
+--- a/lackey/lk_main.c
++++ b/lackey/lk_main.c
+@@ -600,6 +600,7 @@ typedef
+       IRAtom*    addr;
+       Int        size;
+       IRAtom*    guard; /* :: Ity_I1, or NULL=="always True" */
++      ExeContext* pc; // Instruction context
+    }
+    Event;
+ 
+@@ -657,7 +658,9 @@ static VG_REGPARM(2) void trace_store(Addr addr, SizeT size)
+        return;
+    // Skip all non-PM addresses
+    if (addr >= 0x10000000000ul && addr < 0x30000000000ul)
+-        VG_(printf)("STORE %#lx %lu\n", addr, size);
++       VG_(printf)("STORE %#lx %lu\n", addr, size);
++          VG_(pp_ExeContext)(ev->pc);
++   evt->pc = VG_(record_ExeContext)(VG_(get_running_tid)(), 0);
+ }
+ 
+ static VG_REGPARM(2) void trace_modify(Addr addr, SizeT size)
+@@ -723,6 +726,11 @@ static void flushEvents(IRSB* sb)
+           di = unsafeIRDirty_0_N( 0, helperName, 
+                   VG_(fnptr_to_fnentry)( helperAddr ),
+                   mkIRExprVec_0() );
++      } else if (helperAddr == trace_store) {
++          argv = mkIRExprVec_2( ev->addr, mkIRExpr_HWord( ev->size ));
++          di   = unsafeIRDirty_0_N( /*regparms*/2, 
++                  helperName, VG_(fnptr_to_fnentry)( helperAddr ),
++                  argv );
+       } else {
+           argv = mkIRExprVec_2( ev->addr, mkIRExpr_HWord( ev->size ) );
+           di   = unsafeIRDirty_0_N( /*regparms*/2, 
+@@ -819,6 +827,7 @@ void addEvent_Dw ( IRSB* sb, IRAtom* daddr, Int dsize )
+    tl_assert(dsize >= 1 && dsize <= MAX_DSIZE);
+ 
+    // Is it possible to merge this write with the preceding read?
++   /* We don't print reads so we comment this out.
+    lastEvt = &events[events_used-1];
+    if (events_used > 0
+        && lastEvt->ekind == Event_Dr
+@@ -829,7 +838,7 @@ void addEvent_Dw ( IRSB* sb, IRAtom* daddr, Int dsize )
+       lastEvt->ekind = Event_Dm;
+       return;
+    }
+-
++    */
+ 
+    // No.  Add as normal.
+    if (events_used == N_EVENTS)
+@@ -1085,8 +1094,9 @@ IRSB* lk_instrument ( VgCallbackClosure* closure,
+             IRType  type = typeOfIRExpr(tyenv, data);
+             tl_assert(type != Ity_INVALID);
+             if (clo_trace_mem) {
+-               addEvent_Dw( sbOut, st->Ist.Store.addr,
+-                            sizeofIRType(type) );
++                Addr addr = (Addr) st->Ist.Store.addr;
++                addEvent_Dw( sbOut, st->Ist.Store.addr,
++                        sizeofIRType(type) );
+             }
+             if (clo_detailed_counts) {
+                instrument_detail( sbOut, OpStore, type, NULL/*guard*/ );
+@@ -1139,8 +1149,9 @@ IRSB* lk_instrument ( VgCallbackClosure* closure,
+                   dsize = d->mSize;
+                   if (d->mFx == Ifx_Read || d->mFx == Ifx_Modify)
+                      addEvent_Dr( sbOut, d->mAddr, dsize );
+-                  if (d->mFx == Ifx_Write || d->mFx == Ifx_Modify)
+-                     addEvent_Dw( sbOut, d->mAddr, dsize );
++                  if (d->mFx == Ifx_Write || d->mFx == Ifx_Modify) {
++                      addEvent_Dw( sbOut, d->mAddr, dsize );
++                  }
+                } else {
+                   tl_assert(d->mAddr == NULL);
+                   tl_assert(d->mSize == 0);
+@@ -1166,8 +1177,8 @@ IRSB* lk_instrument ( VgCallbackClosure* closure,
+             if (cas->dataHi != NULL)
+                dataSize *= 2; /* since it's a doubleword-CAS */
+             if (clo_trace_mem) {
+-               addEvent_Dr( sbOut, cas->addr, dataSize );
+-               addEvent_Dw( sbOut, cas->addr, dataSize );
++                addEvent_Dr( sbOut, cas->addr, dataSize );
++                addEvent_Dw( sbOut, cas->addr, dataSize );
+             }
+             if (clo_detailed_counts) {
+                instrument_detail( sbOut, OpLoad, dataTy, NULL/*guard*/ );
+@@ -1197,9 +1208,10 @@ IRSB* lk_instrument ( VgCallbackClosure* closure,
+             } else {
+                /* SC */
+                dataTy = typeOfIRExpr(tyenv, st->Ist.LLSC.storedata);
+-               if (clo_trace_mem)
+-                  addEvent_Dw( sbOut, st->Ist.LLSC.addr,
+-                                      sizeofIRType(dataTy) );
++               if (clo_trace_mem) {
++                   addEvent_Dw( sbOut, st->Ist.LLSC.addr,
++                           sizeofIRType(dataTy) );
++               }
+                if (clo_detailed_counts)
+                   instrument_detail( sbOut, OpStore, dataTy, NULL/*guard*/ );
+             }

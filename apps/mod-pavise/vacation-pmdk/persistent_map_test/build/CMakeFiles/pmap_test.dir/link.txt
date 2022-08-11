@@ -1,0 +1,1 @@
+/usr/bin/c++   -ggdb  -rdynamic CMakeFiles/pmap_test.dir/pmap_test.cpp.o  -o pmap_test  -L/usr/local/lib64 -Wl,-rpath,/usr/local/lib64 -lpmemobj -lpthread -L"/home/swapnilh/pmdk-stuff/libcxx/build//lib/" -lc++ 

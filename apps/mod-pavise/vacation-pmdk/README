@@ -1,0 +1,5 @@
+This is a C++ port of vacation from the STAMP benchmark and later WHISPER which uses PMDK library.
+
+Note that there are some differences:
+
+1. CustomerInfoList is a map and not a list. It is more efficient to find reservationInfo in the list.

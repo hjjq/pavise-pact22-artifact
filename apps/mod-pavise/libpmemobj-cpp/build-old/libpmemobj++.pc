@@ -1,0 +1,10 @@
+prefix=/usr/local
+libdir=${prefix}/lib64
+includedir=${prefix}/include
+
+Name: libpmemobj++
+Description: libpmemobj++ - c++ bindings for libpmemobj library
+Version: 1.5
+URL: http://github.com/pmem/libpmemobj-cpp
+Requires: libpmemobj >= 1.4
+Cflags: -I${includedir}
