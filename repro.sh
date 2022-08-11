@@ -9,6 +9,13 @@ popd () {
 }
 export pushd popd
 
+### Compile ISA-L
+cd $PAVISE_ROOT/isa-l
+./autogen.sh
+./configure --prefix=$PAVISE_ROOT/isa-l --libdir=$PAVISE_ROOT/isa-l/lib
+make
+make install
+
 ### Compile Pavise shared library
 echo "======================================="
 echo "Compiling Pavise shared library."
