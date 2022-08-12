@@ -11,7 +11,7 @@ export pushd popd
 
 ### Compile ISA-L
 echo "======================================="
-echo "Compiling ISA-L."
+echo "Compiling ISA-L... (~ mins)"
 pushd $PAVISE_ROOT/isa-l
 ./autogen.sh &> /dev/null
 ./configure --prefix=$PAVISE_ROOT/isa-l --libdir=$PAVISE_ROOT/isa-l/lib &> /dev/null
@@ -128,7 +128,9 @@ sleep 3
 # Setup for real applications
 ###################################################
 ### Build vacation PMDK (WHISPER)
-echo "Recompiling vacation PMDK..."
+echo "======================================="
+echo "Prepare environment for real applications..."
+echo "Compiling WHISPER PMDK..."
 pushd $PAVISE_ROOT/apps/mod-pavise/pmdk
 bash compile.sh &> /dev/null
 if [ $? -ne 0 ]; 
@@ -139,7 +141,7 @@ fi
 echo "PMDK compilation finished successfully."
 popd
 ### Build pmem-valgrind
-echo "Recompiling pmem-valgrind..."
+echo "Compiling pmem-valgrind..."
 pushd $PAVISE_ROOT/apps/mod-pavise/pmem-valgrind
 ./autogen.sh &> /dev/null
 ./configure &> /dev/null
@@ -148,7 +150,7 @@ if [ $? -ne 0 ];
 then 
     echo "ERROR! PMDK build failed." 
     exit 1
-
+fi
 echo "pmem-valgrind compilation finished successfully."
 popd
 
