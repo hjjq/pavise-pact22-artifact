@@ -1,0 +1,4 @@
+/ssd1/hanjie/mod-pavise/memcached-pmdk/notx-build/CMakeFiles/rebuild_cache.dir
+/ssd1/hanjie/mod-pavise/memcached-pmdk/notx-build/CMakeFiles/immer_memcached.dir
+/ssd1/hanjie/mod-pavise/memcached-pmdk/notx-build/CMakeFiles/edit_cache.dir
+/ssd1/hanjie/mod-pavise/memcached-pmdk/notx-build/CMakeFiles/memcached.dir
