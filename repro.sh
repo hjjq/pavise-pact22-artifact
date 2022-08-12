@@ -125,27 +125,8 @@ echo "Reproducing real applications in 3 seconds..."
 sleep 3
 
 ###################################################
-# Real applications
+# Setup for real applications
 ###################################################
-### Preproduce vacation  + Pavise ignore list
-echo "======================================="
-echo "Preproducing vacation + Pavise ignore list"
-# Edit PMDK user.mk to use Pavise ignorelist pass
-printf "CC=clang 
-CXX=clang++
-EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload" > $PAVISE_ROOT/pmdk-1.10/user.mk
-### Recompile PMDK with new pass
-echo "Recompiling PMDK with new pass... (~3 min)"
-pushd $PAVISE_ROOT/pmdk-1.10
-make clean -j &> /dev/null
-make -j &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! PMDK build failed." 
-    exit 1
-fi
-echo "PMDK compilation finished successfully."
-popd 
 ### Build vacation PMDK (WHISPER)
 echo "Recompiling vacation PMDK..."
 pushd $PAVISE_ROOT/apps/mod-pavise/pmdk
@@ -170,6 +151,29 @@ then
 
 echo "pmem-valgrind compilation finished successfully."
 popd
+
+###################################################
+# Vacation ignore list
+###################################################
+### Preproduce vacation  + Pavise ignore list
+echo "======================================="
+echo "Preproducing vacation + Pavise ignore list"
+# Edit PMDK user.mk to use Pavise ignorelist pass
+printf "CC=clang 
+CXX=clang++
+EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload" > $PAVISE_ROOT/pmdk-1.10/user.mk
+### Recompile PMDK with ignore list pass
+echo "Recompiling PMDK with ignore list pass... (~3 min)"
+pushd $PAVISE_ROOT/pmdk-1.10
+make clean -j &> /dev/null
+make -j &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! PMDK build failed." 
+    exit 1
+fi
+echo "PMDK compilation finished successfully."
+popd 
 ### Build vacation
 echo "Building vacation..."
 pushd $PAVISE_ROOT/apps/mod-pavise/vacation-pmdk
@@ -191,6 +195,44 @@ rm -rf /pmem0p1/kevin/pools/*
 echo "Finished running vacation."
 popd
 
+##########
+# Reproduce memcached-W  + Pavise ignore list
+##########
+echo "======================================="
+echo "Preproducing memcached-W + Pavise ignore list"
+# Modify LD_LIBRARY_PATH 
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+
+########## Build memcached-W
+echo "Building memcached-W..."
+pushd $PAVISE_ROOT/apps/mod-pavise/memcached-pmdk
+sed -i 's@set(CMAKE_CXX_FLAGS.*@set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_CONFIG_H -O2 -ggdb -mclflushopt -lpthread -DTX -fexperimental-new-pass-manager -pavise=pavisenoload"))@' ./CMakeLists.txt
+sed -i 's@set(CMAKE_C_FLAGS.*@set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAVE_CONFIG_H -O2 -ggdb -mclflushopt -lpthread -DTX -fexperimental-new-pass-manager -pavise=pavisenoload"))@' ./CMakeLists.txt
+bash compile.sh  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! memcached-W build failed." 
+    exit 1
+fi
+echo "memcached-W compilation finished successfully."
+popd
+########## Run memcached-W
+echo "Starting memcached-W server..."
+pushd $PAVISE_ROOT/apps/mod-pavise/memcached-pmdk/tx-build
+rm -rf /pmem0p1/kevin/pools/*
+./memcached /pmem0p1/kevin/pools/memcached-pmdk -u root -p 11211 -l 127.0.0.1 -t 1 &
+PID_memcached=$!
+sleep 5 # make sure the server is fully started
+popd
+pushd $PAVISE_ROOT/apps/mod-pavise/libmemcached-1.0.18/clients
+echo "Starting memcached-W client..."
+./memaslap -s 127.0.0.1:11211 -c 4 -x 100000 -T 4 -X 512 -F ./run.cnf -d 1 &> $PAVISE_ROOT/results/memcached-W_ignorelist
+kill $PID_memcached
+sleep 3 # make sure the server is fully terminated
+echo "Finished running memcached-W."
+popd
+
+
 ###################################################
 # Preproduce vacation  + Pavise conservative
 ###################################################
@@ -202,8 +244,8 @@ CXX=clang++
 EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
 # Modify LD_LIBRARY_PATH 
 export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
-### Recompile PMDK with new pass
-echo "Recompiling PMDK with new pass... (~3 min)"
+### Recompile PMDK with conservative pass
+echo "Recompiling PMDK with conservative pass... (~3 min)"
 pushd $PAVISE_ROOT/pmdk-1.10
 make clean -j &> /dev/null
 make -j &> /dev/null
@@ -214,30 +256,6 @@ then
 fi
 echo "PMDK compilation finished successfully."
 popd 
-### Build vacation PMDK (WHISPER)
-echo "Recompiling vacation PMDK..."
-pushd $PAVISE_ROOT/apps/mod-pavise/pmdk
-bash compile.sh &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! PMDK build failed." 
-    exit 1
-fi
-echo "PMDK compilation finished successfully."
-popd
-### Build pmem-valgrind
-echo "Recompiling pmem-valgrind..."
-pushd $PAVISE_ROOT/apps/mod-pavise/pmem-valgrind
-./autogen.sh &> /dev/null
-./configure &> /dev/null
-make -j &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! PMDK build failed." 
-    exit 1
-fi
-echo "pmem-valgrind compilation finished successfully."
-popd
 ### Build vacation
 echo "Building vacation..."
 pushd $PAVISE_ROOT/apps/mod-pavise/vacation-pmdk
@@ -256,4 +274,44 @@ pushd $PAVISE_ROOT/apps/mod-pavise/vacation-pmdk/build
 rm -rf /pmem0p1/kevin/pools/*
 ./vacation /pmem0p1/kevin/pools/vacation -r100000 -t200000 -n1 -q55 -u99 &> $PAVISE_ROOT/results/vacation_conservative
 echo "Finished running vacation."
+popd
+
+##########
+# Reproduce memcached-W  + Pavise conservative
+##########
+echo "======================================="
+echo "Preproducing memcached-W + Pavise conservative tracking"
+# Edit PMDK user.mk to use Pavise conservative
+printf "CC=clang 
+CXX=clang++
+EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
+# Modify LD_LIBRARY_PATH 
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+
+########## Build memcached-W
+echo "Building memcached-W..."
+pushd $PAVISE_ROOT/apps/mod-pavise/memcached-pmdk
+sed -i 's@set(CMAKE_CXX_FLAGS.*@set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_CONFIG_H -O2 -ggdb -mclflushopt -lpthread -DTX -fexperimental-new-pass-manager -pavise=pavisenoload_conservative"))@' ./CMakeLists.txt
+sed -i 's@set(CMAKE_C_FLAGS.*@set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAVE_CONFIG_H -O2 -ggdb -mclflushopt -lpthread -DTX -fexperimental-new-pass-manager -pavise=pavisenoload_conservative"))@' ./CMakeLists.txt
+bash compile.sh  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! memcached-W build failed." 
+    exit 1
+fi
+echo "memcached-W compilation finished successfully."
+popd
+########## Run memcached-W
+echo "Starting memcached-W server..."
+pushd $PAVISE_ROOT/apps/mod-pavise/memcached-pmdk/tx-build
+rm -rf /pmem0p1/kevin/pools/*
+./memcached /pmem0p1/kevin/pools/memcached-pmdk -u root -p 11211 -l 127.0.0.1 -t 1 &
+sleep 5 # make sure the server is fully started
+PID_memcached=$!
+popd pushd $PAVISE_ROOT/apps/mod-pavise/libmemcached-1.0.18/clients
+echo "Starting memcached-W client..."
+./memaslap -s 127.0.0.1:11211 -c 4 -x 100000 -T 4 -X 512 -F ./run.cnf -d 1 &> $PAVISE_ROOT/results/memcached-W_conservative
+kill $PID_memcached
+sleep 3 # make sure the server is fully terminated
+echo "Finished running memcached-W."
 popd
