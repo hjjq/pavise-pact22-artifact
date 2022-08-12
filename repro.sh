@@ -310,7 +310,8 @@ rm -rf /pmem0p1/kevin/pools/*
 ./memcached /pmem0p1/kevin/pools/memcached-pmdk -u root -p 11211 -l 127.0.0.1 -t 1 &
 sleep 5 # make sure the server is fully started
 PID_memcached=$!
-popd pushd $PAVISE_ROOT/apps/mod-pavise/libmemcached-1.0.18/clients
+popd 
+pushd $PAVISE_ROOT/apps/mod-pavise/libmemcached-1.0.18/clients
 echo "Starting memcached-W client..."
 ./memaslap -s 127.0.0.1:11211 -c 4 -x 100000 -T 4 -X 512 -F ./run.cnf -d 1 &> $PAVISE_ROOT/results/memcached-W_conservative
 kill $PID_memcached
