@@ -234,6 +234,40 @@ sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-W."
 popd
 
+###################################################
+# memcached-L ignore list
+###################################################
+### Preproduce memcached-L  + Pavise ignore list
+echo "======================================="
+echo "Preproducing memcached-L + Pavise ignore list"
+### Build memcached-L
+echo "Building memcached-L..."
+pushd $PAVISE_ROOT/apps/memcached-pavise
+# Use Pavise ignore list pass
+sed -i 's@EXTRA_CFLAGS = -g.*@EXTRA_CFLAGS = -g -I${PAVISE_ROOT}/include -L${PAVISE_ROOT}/build/lib -Wno-error=unused-command-line-argument -fexperimental-new-pass-manager -pavise=pavisenoload@' ./user.mk
+make -j  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! memcached-L build failed." 
+    exit 1
+fi
+echo "memcached-L compilation finished successfully."
+popd
+### Run memcached-L
+echo "Running memcached-L with ignore list"
+pushd $PAVISE_ROOT/apps/memcached-pavise
+rm -rf /pmem0p1/kevin/pools/*
+./memcached -u root -m 0 -t 1 -o pslab_file=/pmem0p1/kevin/pools/memcached-l,pslab_force &
+PID_memcached_L=$!
+sleep 5 # make sure the server is fully started
+echo "Starting memcached-L client..."
+memtier_benchmark -p 11211 -P memcache_binary -n 100000 --ratio=1:0 -d 256 -t 1 &> $PAVISE_ROOT/results/memcached-L_ignorelist
+kill $PID_memcached_L
+sleep 3 # make sure the server is fully terminated
+echo "Finished running memcached-L."
+popd
+
+
 
 ###################################################
 # Preproduce vacation  + Pavise conservative
@@ -317,4 +351,55 @@ echo "Starting memcached-W client..."
 kill $PID_memcached
 sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-W."
+popd
+
+
+###################################################
+# Preproduce memcached-L  + Pavise conservative
+###################################################
+echo "======================================="
+echo "Preproducing memcached-L + Pavise conservative tracking"
+# Edit PMDK user.mk to use Pavise conservative
+printf "CC=clang 
+CXX=clang++
+EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
+# Modify LD_LIBRARY_PATH 
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+### Recompile PMDK with conservative pass
+echo "Recompiling PMDK with conservative pass... (~3 min)"
+pushd $PAVISE_ROOT/pmdk-1.10
+make clean -j &> /dev/null
+make -j &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! PMDK build failed." 
+    exit 1
+fi
+echo "PMDK compilation finished successfully."
+popd 
+### Build memcached-L
+echo "Building memcached-L..."
+pushd $PAVISE_ROOT/apps/memcached-pavise
+# Use Pavise conservative tracking pass
+sed -i 's@EXTRA_CFLAGS = -g.*@EXTRA_CFLAGS = -g -I${PAVISE_ROOT}/include -L${PAVISE_ROOT}/build/lib -Wno-error=unused-command-line-argument -fexperimental-new-pass-manager -pavise=pavisenoload_conservative@' ./user.mk
+make -j  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! memcached-L build failed." 
+    exit 1
+fi
+echo "memcached-L compilation finished successfully."
+popd
+### Run memcached-L
+echo "Running memcached-L with conservative"
+pushd $PAVISE_ROOT/apps/memcached-pavise
+rm -rf /pmem0p1/kevin/pools/*
+./memcached -u root -m 0 -t 1 -o pslab_file=/pmem0p1/kevin/pools/memcached-l,pslab_force &
+PID_memcached_L=$!
+sleep 5 # make sure the server is fully started
+echo "Starting memcached-L client..."
+memtier_benchmark -p 11211 -P memcache_binary -n 100000 --ratio=1:0 -d 256 -t 1 &> $PAVISE_ROOT/results/memcached-L_conservative
+kill $PID_memcached_L
+sleep 3 # make sure the server is fully terminated
+echo "Finished running memcached-L."
 popd
