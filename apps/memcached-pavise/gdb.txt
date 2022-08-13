@@ -1,0 +1,3099 @@
+0x10003ef8000:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8008:	0x0d	0x0a	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8010:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8018:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8020:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8028:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8030:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8038:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8040:	0x00	0x00	0x00	0x00	0xc4	0x81	0xef	0x03
+0x10003ef8048:	0x00	0x03	0x00	0x00	0x44	0x7d	0xef	0x03
+0x10003ef8050:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8058:	0x00	0x00	0x00	0x00	0x3f	0x00	0x00	0x00
+0x10003ef8060:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x10003ef8068:	0x01	0x00	0x00	0x43	0x08	0x0a	0x00	0x00
+0x10003ef8070:	0x00	0x00	0x00	0x00	0x30	0x11	0x00	0x00
+0x10003ef8078:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+0x10003ef8080:	0x69	0x65	0x72	0x2d	0x38	0x31	0x00	0x78
+0x10003ef8088:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8090:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8098:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80a0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80a8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80b0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80b8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80c0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80c8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80d0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80d8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80e0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80e8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80f0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef80f8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8100:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8108:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8110:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8118:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8120:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8128:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8130:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8138:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8140:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8148:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8150:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8158:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8160:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8168:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8170:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8178:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003ef8180:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x0d
+0x10003ef8188:	0x0a	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8190:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef8198:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef81a0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef81a8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef81b0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef81b8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef81c0:	0x00	0x00	0x00	0x00	0x44	0x83	0xef	0x03
+0x10003ef81c8:	0x00	0x03	0x00	0x00	0x44	0x80	0xef	0x03
+0x10003ef81d0:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003ef81d8:	0x00	0x00	0x00	0x00	0x3f	0x00	0x00	0x00
+0x10003ef81e0:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x10003ef81e8:	0x01	0x00	0x00	0x43	0x08	0x0a	0x00	0x00
+0x10003ef81f0:	0x00	0x00	0x00	0x00	0xfe	0x10	0x00	0x00
+0x10003ef81f8:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+0x30003ef8000:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8008:	0x0d	0x0a	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8010:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8018:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8020:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8028:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8030:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8038:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8040:	0x00	0x00	0x00	0x00	0xc4	0x81	0xef	0x03
+0x30003ef8048:	0x00	0x03	0x00	0x00	0x44	0x7d	0xef	0x03
+0x30003ef8050:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8058:	0x00	0x00	0x00	0x00	0x3f	0x00	0x00	0x00
+0x30003ef8060:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x30003ef8068:	0x01	0x00	0x00	0x43	0x88	0x0a	0x00	0x00
+0x30003ef8070:	0x00	0x00	0x00	0x00	0x30	0x11	0x00	0x00
+0x30003ef8078:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+0x30003ef8080:	0x69	0x65	0x72	0x2d	0x38	0x31	0x00	0x78
+0x30003ef8088:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8090:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8098:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80a0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80a8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80b0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80b8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80c0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80c8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80d0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80d8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80e0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80e8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80f0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef80f8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8100:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8108:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8110:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8118:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8120:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8128:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8130:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8138:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8140:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8148:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8150:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8158:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8160:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8168:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8170:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8178:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003ef8180:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x0d
+0x30003ef8188:	0x0a	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8190:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef8198:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef81a0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef81a8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef81b0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef81b8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef81c0:	0x00	0x00	0x00	0x00	0x44	0x83	0xef	0x03
+0x30003ef81c8:	0x00	0x03	0x00	0x00	0x44	0x80	0xef	0x03
+0x30003ef81d0:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003ef81d8:	0x00	0x00	0x00	0x00	0x3f	0x00	0x00	0x00
+0x30003ef81e0:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x30003ef81e8:	0x01	0x00	0x00	0x43	0x88	0x0a	0x00	0x00
+0x30003ef81f0:	0x00	0x00	0x00	0x00	0xfe	0x10	0x00	0x00
+0x30003ef81f8:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+Hardware watchpoint 2: *0x30003ef8068
+Continuing.
+[Switching to Thread 0x7fffef7fe700 (LWP 26158)]
+
+Thread 5 "memcached" hit Hardware watchpoint 2: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+0x000000000041c199 in item_crawler_thread (arg=<optimized out>) at crawler.c:404
+404	            if (refcount_incr(search) != 2) {
+Continuing.
+
+Thread 5 "memcached" hit Hardware watchpoint 2: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+crawler_expired_eval (cm=<optimized out>, search=0x30003ef8044, hv=79664036, i=<optimized out>)
+    at crawler.c:194
+194	    if ((search->exptime != 0 && search->exptime < current_time)
+Continuing.
+
+Thread 1 "memcached" received signal SIGINT, Interrupt.
+[Switching to Thread 0x7ffff7fd07c0 (LWP 26151)]
+0x00007ffff70d6a47 in epoll_wait (epfd=3, events=0x657a20, maxevents=32, timeout=1000)
+    at ../sysdeps/unix/sysv/linux/epoll_wait.c:30
+30	../sysdeps/unix/sysv/linux/epoll_wait.c: No such file or directory.
+Continuing.
+
+Thread 1 "memcached" received signal SIGINT, Interrupt.
+0x00007ffff70d6a47 in epoll_wait (epfd=3, events=0x657a20, maxevents=32, timeout=1000)
+    at ../sysdeps/unix/sysv/linux/epoll_wait.c:30
+30	in ../sysdeps/unix/sysv/linux/epoll_wait.c
+0x10003effe00:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x0d
+0x10003effe08:	0x0a	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe10:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe18:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe20:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe28:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe30:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe38:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe40:	0x00	0x00	0x00	0x00	0xc4	0xff	0xef	0x03
+0x10003effe48:	0x00	0x03	0x00	0x00	0x44	0xfb	0xef	0x03
+0x10003effe50:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003effe58:	0x00	0x00	0x00	0x00	0x40	0x00	0x00	0x00
+0x10003effe60:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x10003effe68:	0x01	0x00	0x00	0x43	0x08	0x09	0x00	0x00
+0x10003effe70:	0x00	0x00	0x00	0x00	0xc8	0x00	0x00	0x00
+0x10003effe78:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+0x10003effe80:	0x69	0x65	0x72	0x2d	0x31	0x00	0x78	0x78
+0x10003effe88:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effe90:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effe98:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effea0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effea8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effeb0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effeb8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effec0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effec8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effed0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effed8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effee0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effee8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effef0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003effef8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff00:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff08:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff10:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff18:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff20:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff28:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff30:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff38:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff40:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff48:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff50:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff58:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff60:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff68:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff70:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff78:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x10003efff80:	0x78	0x78	0x78	0x78	0x78	0x78	0x0d	0x0a
+0x10003efff88:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efff90:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efff98:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffa0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffa8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffb0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffb8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffc0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffc8:	0x00	0x00	0x00	0x00	0x44	0xfe	0xef	0x03
+0x10003efffd0:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x10003efffd8:	0x00	0x00	0x00	0x00	0x40	0x00	0x00	0x00
+0x10003efffe0:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x10003efffe8:	0x01	0x00	0x00	0x43	0x08	0x09	0x00	0x00
+0x10003effff0:	0x00	0x00	0x00	0x00	0x9b	0x00	0x00	0x00
+0x10003effff8:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+0x30003effe00:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x0d
+0x30003effe08:	0x0a	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe10:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe18:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe20:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe28:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe30:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe38:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe40:	0x00	0x00	0x00	0x00	0xc4	0xff	0xef	0x03
+0x30003effe48:	0x00	0x03	0x00	0x00	0x44	0xfb	0xef	0x03
+0x30003effe50:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003effe58:	0x00	0x00	0x00	0x00	0x40	0x00	0x00	0x00
+0x30003effe60:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x30003effe68:	0x01	0x00	0x00	0x43	0x88	0x09	0x00	0x00
+0x30003effe70:	0x00	0x00	0x00	0x00	0xc8	0x00	0x00	0x00
+0x30003effe78:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+0x30003effe80:	0x69	0x65	0x72	0x2d	0x31	0x00	0x78	0x78
+0x30003effe88:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effe90:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effe98:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effea0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effea8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effeb0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effeb8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effec0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effec8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effed0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effed8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effee0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effee8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effef0:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003effef8:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff00:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff08:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff10:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff18:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff20:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff28:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff30:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff38:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff40:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff48:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff50:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff58:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff60:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff68:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff70:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff78:	0x78	0x78	0x78	0x78	0x78	0x78	0x78	0x78
+0x30003efff80:	0x78	0x78	0x78	0x78	0x78	0x78	0x0d	0x0a
+0x30003efff88:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efff90:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efff98:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffa0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffa8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffb0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffb8:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffc0:	0x00	0x00	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffc8:	0x00	0x00	0x00	0x00	0x44	0xfe	0xef	0x03
+0x30003efffd0:	0x00	0x03	0x00	0x00	0x00	0x00	0x00	0x00
+0x30003efffd8:	0x00	0x00	0x00	0x00	0x40	0x00	0x00	0x00
+0x30003efffe0:	0x00	0x00	0x00	0x00	0x02	0x01	0x00	0x00
+0x30003efffe8:	0x01	0x00	0x00	0x43	0x88	0x09	0x00	0x00
+0x30003effff0:	0x00	0x00	0x00	0x00	0x9b	0x00	0x00	0x00
+0x30003effff8:	0x00	0x00	0x00	0x00	0x6d	0x65	0x6d	0x74
+Hardware watchpoint 2: *0x30003ef8068
+Hardware watchpoint 3: *0x30003ef81e8
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff003dab0 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff0040fa0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff0040fa0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00448f0 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff0047de0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff0047de0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff004b730 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff004ec20, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff004ec20) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff0052570 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff0055a60, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff0055a60) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00593b0 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff005c8a0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff005c8a0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00601f0 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff00636e0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff00636e0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff0067030 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff006a520, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff006a520) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff006de70 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff0071360, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff0071360) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff0074cb0 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef837c "memtier-84", nkey=10, hv=hv@entry=2900636173, 
+    c=c@entry=0x7ffff00781a0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff00781a0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef81c4, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff007baf0 "memtier-84", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef81c4) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003effcfc "memtier-84", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2900636173, c=c@entry=0x7ffff00a8560, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef81c4, hv=hv@entry=2900636173) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 3: *0x30003ef81e8
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef81c4, it@entry=0x7ffff00a8560) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Hardware watchpoint 4: *0x30003ef8068
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff003dab0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff0040fa0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff0040fa0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00448f0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff0047de0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff0047de0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff004b730 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff004ec20, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff004ec20) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff0052570 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff0055a60, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff0055a60) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00593b0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff005c8a0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff005c8a0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00601f0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff00636e0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00636e0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff0067030 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff006a520, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff006a520) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff006de70 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff0071360, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff0071360) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff0074cb0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef81fc "memtier-85", nkey=10, hv=hv@entry=2796195506, 
+    c=c@entry=0x7ffff00781a0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00781a0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Undefined command: "cc".  Try "help".
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff007baf0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+[Switching to Thread 0x7fffeeffd700 (LWP 28135)]
+
+Thread 6 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+0x00000000004137bb in lru_pull_tail (orig_id=orig_id@entry=8, cur_lru=cur_lru@entry=0, total_bytes=27940, 
+    flags=flags@entry=2 '\002', max_age=max_age@entry=52, ret_it=ret_it@entry=0x0) at items.c:1176
+1176	        if (refcount_incr(search) != 2) {
+Continuing.
+
+Thread 6 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+[Switching to Thread 0x7ffff4fbf700 (LWP 28132)]
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00a8560, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00a8560) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00abeb0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Undefined command: "cc".  Try "help".
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00af3a0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00af3a0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00b2cf0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00b61e0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00b61e0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00b9b30 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00bd020, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00bd020) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00c0970 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00c3e60, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00c3e60) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00c77b0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00caca0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Undefined command: "cc".  Try "help".
+Undefined command: "cc".  Try "help".
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00caca0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00ce5f0 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00d1ae0, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00d1ae0) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff00d5430 "memtier-85", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003eff6fc "memtier-85", 'x' <repeats 190 times>..., nkey=10, 
+    hv=hv@entry=2796195506, c=c@entry=0x7ffff00d8920, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=2796195506) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff00d8920) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741824
+New value = 1073741825
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;//if((uint64_t)p >= 0x30000000000ULL) printf("p->sl_curr addr = %p\n", (void*)&(p->sl_curr));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1073741825
+New value = 1107296257
+do_item_alloc (key=key@entry=0x7ffff003a390 "memtier-86", 'x' <repeats 190 times>..., nkey=nkey@entry=10, 
+    flags=<optimized out>, exptime=<optimized out>, nbytes=nbytes@entry=258) at items.c:344
+344	    it->nkey = nkey; //if((uint64_t)it >= 0x30000000000ULL) printf("it->nkey = %p\n", (void*)&(it->nkey));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1124073473
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=1684327846) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_link (it=it@entry=0x30003ef8044, hv=hv@entry=1684327846) at items.c:542
+542	    item_stats_sizes_add(it);//if((uint64_t)it >= 0x30000000000ULL) printf("it= %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1124073473
+0x000000000041493a in do_item_remove (it=it@entry=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073473
+New value = 1124073474
+do_item_get (key=key@entry=0x30003ef7efc "memtier-86", nkey=10, hv=hv@entry=1684327846, 
+    c=c@entry=0x7ffff003d880, do_update=<optimized out>) at items.c:1047
+1047	    if (settings.verbose > 2) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1124073474
+New value = 1107296258
+do_item_unlink (it=it@entry=0x30003ef8044, hv=hv@entry=1684327846) at items.c:552
+552	        if (it->it_flags & ITEM_PSLAB)
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296258
+New value = 1107296257
+0x000000000041493a in do_item_remove (it=0x30003ef8044, it@entry=0x7ffff003d880) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296257
+New value = 1107296256
+0x000000000041493a in do_item_remove (it=0x30003ef8044) at items.c:591
+591	    if (refcount_decr(it) == 0) {//if((uint64_t)it >= 0x30000000000ULL) printf("it591 = %p\n", (void*)(it));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1107296256
+New value = 67108864
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 67108864
+New value = 1140850688
+do_slabs_free (ptr=ptr@entry=0x30003ef8044, size=size@entry=325, id=id@entry=8) at slabs.c:547
+547	        it->slabs_clsid = 0;//if((uint64_t)it >= 0x30000000000ULL) printf("it->slabs_clsid = %p\n", (void*)&(it->slabs_clsid));
+Continuing.
+
+Thread 3 "memcached" hit Hardware watchpoint 4: *0x30003ef8068
+
+Old value = 1140850688
+New value = 1073741824
+do_slabs_alloc (size=size@entry=325, id=id@entry=8, total_bytes=<optimized out>, 
+    total_bytes@entry=0x7ffff4fbeab8, flags=<optimized out>, flags@entry=0) at slabs.c:417
+417	        it->refcount = 1;//if((uint64_t)it >= 0x30000000000ULL) printf("it->refcount = %p\n", (void*)&(it->refcount));
