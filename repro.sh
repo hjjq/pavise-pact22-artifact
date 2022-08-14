@@ -537,4 +537,4 @@ echo "Starting redis client..."
 memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis-no_pavise
 kill $PID_redis
 sleep 3 # make sure the server is fully terminated
-echo "Finished running
+echo "Finished running redis"
