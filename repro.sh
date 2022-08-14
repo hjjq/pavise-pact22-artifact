@@ -124,9 +124,9 @@ echo "Finished reproducing microbenchmarks. Results are stored in $PAVISE_ROOT/r
 echo "Reproducing real applications in 3 seconds..."
 sleep 3
 
-###################################################
-# Setup for real applications
-###################################################
+##################################################
+ Setup for real applications
+##################################################
 ### Build vacation PMDK (WHISPER)
 echo "======================================="
 echo "Prepare environment for real applications..."
@@ -268,6 +268,39 @@ echo "Finished running memcached-L."
 popd
 
 
+###################################################
+# Redis ignore list
+###################################################
+### Preproduce redis  + Pavise ignore list
+echo "======================================="
+echo "Preproducing redis + Pavise ignore list"
+## Build redis
+echo "Building redis..."
+pushd $PAVISE_ROOT/apps/redis
+sed -i 's@PAVISE_CFLAGS=.*@PAVISE_CFLAGS=-fexperimental-new-pass-manager -pavise=pavisenoload@' ./src/Makefile
+make -j USE_PMDK=yes STD=-std=gnu99  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! redis build failed." 
+    exit 1
+fi
+echo "redis compilation finished successfully."
+popd
+### Run redis
+echo "Running redis with ignore list"
+pushd $PAVISE_ROOT/apps/redis
+rm -rf /pmem0p1/kevin/pools/*
+# First shutdown any existing redis servers
+./src/redis-cli shutdown  &> /dev/null 
+./src/redis-server redis.conf &
+PID_redis=$!
+sleep 5 # make sure the server is fully started
+echo "Starting redis client..."
+memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis_ignorelist
+kill $PID_redis
+sleep 3 # make sure the server is fully terminated
+echo "Finished running redis."
+popd
 
 ###################################################
 # Preproduce vacation  + Pavise conservative
@@ -354,29 +387,13 @@ echo "Finished running memcached-W."
 popd
 
 
-###################################################
-# Preproduce memcached-L  + Pavise conservative
-###################################################
+##################################################
+ Preproduce memcached-L  + Pavise conservative
+##################################################
 echo "======================================="
 echo "Preproducing memcached-L + Pavise conservative tracking"
-# Edit PMDK user.mk to use Pavise conservative
-printf "CC=clang 
-CXX=clang++
-EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
 # Modify LD_LIBRARY_PATH 
 export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
-### Recompile PMDK with conservative pass
-echo "Recompiling PMDK with conservative pass... (~3 min)"
-pushd $PAVISE_ROOT/pmdk-1.10
-make clean -j &> /dev/null
-make -j &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! PMDK build failed." 
-    exit 1
-fi
-echo "PMDK compilation finished successfully."
-popd 
 ### Build memcached-L
 echo "Building memcached-L..."
 pushd $PAVISE_ROOT/apps/memcached-pavise
@@ -404,79 +421,14 @@ sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-L."
 popd
 
-###################################################
-# Redis ignore list
-###################################################
-### Preproduce redis  + Pavise ignore list
-echo "======================================="
-echo "Preproducing redis + Pavise ignore list"
-# Edit PMDK user.mk to use Pavise ignorelist pass
-printf "CC=clang 
-CXX=clang++
-EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload" > $PAVISE_ROOT/pmdk-1.10/user.mk
-### Recompile PMDK with ignore list pass
-echo "Recompiling PMDK with ignore list pass... (~3 min)"
-pushd $PAVISE_ROOT/pmdk-1.10
-make clean -j &> /dev/null
-make -j &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! PMDK build failed." 
-    exit 1
-fi
-echo "PMDK compilation finished successfully."
-popd 
-## Build redis
-echo "Building redis..."
-pushd $PAVISE_ROOT/apps/redis
-sed -i 's@PAVISE_CFLAGS=.*@PAVISE_CFLAGS=-fexperimental-new-pass-manager -pavise=pavisenoload@' ./src/Makefile
-make -j USE_PMDK=yes STD=-std=gnu99  &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! redis build failed." 
-    exit 1
-fi
-echo "redis compilation finished successfully."
-popd
-### Run redis
-echo "Running redis with ignore list"
-pushd $PAVISE_ROOT/apps/redis
-rm -rf /pmem0p1/kevin/pools/*
-# First shutdown any existing redis servers
-./src/redis-cli shutdown  &> /dev/null 
-./src/redis-server redis.conf &
-PID_redis=$!
-sleep 5 # make sure the server is fully started
-echo "Starting redis client..."
-memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis_ignorelist
-kill $PID_redis
-sleep 3 # make sure the server is fully terminated
-echo "Finished running redis."
-popd
 
 ###################################################
 # Preproduce redis  + Pavise conservative
 ###################################################
 echo "======================================="
 echo "Preproducing redis + Pavise conservative tracking"
-# Edit PMDK user.mk to use Pavise conservative
-printf "CC=clang 
-CXX=clang++
-EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
 # Modify LD_LIBRARY_PATH 
 export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
-### Recompile PMDK with conservative pass
-echo "Recompiling PMDK with conservative pass... (~3 min)"
-pushd $PAVISE_ROOT/pmdk-1.10
-make clean -j &> /dev/null
-make -j &> /dev/null
-if [ $? -ne 0 ]; 
-then 
-    echo "ERROR! PMDK build failed." 
-    exit 1
-fi
-echo "PMDK compilation finished successfully."
-popd 
 ### Build redis
 echo "Building redis..."
 pushd $PAVISE_ROOT/apps/redis
