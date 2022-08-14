@@ -1,0 +1,314 @@
+common.o: ../../../../src/tools/../../src/../src/tools/pmempool/common.c \
+ /usr/include/stdc-predef.h /usr/include/stdlib.h \
+ /usr/include/bits/libc-header-start.h /usr/include/features.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/bits/floatn.h /usr/include/sys/types.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/bits/uintn-identity.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/types/struct_timeval.h \
+ /usr/include/bits/types/struct_timespec.h /usr/include/bits/select2.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
+ /usr/include/bits/stdlib.h /usr/include/stdio.h \
+ /usr/include/bits/types/__FILE.h /usr/include/bits/types/FILE.h \
+ /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/bits/types/__mbstate_t.h \
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+ /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/fcntl-linux.h \
+ /usr/include/bits/fcntl2.h \
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/string.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/bits/strings_fortified.h \
+ /usr/include/bits/string_fortified.h /usr/include/err.h \
+ /usr/include/sys/param.h \
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/signal.h \
+ /usr/include/bits/signum.h /usr/include/bits/signum-generic.h \
+ /usr/include/bits/types/sig_atomic_t.h \
+ /usr/include/bits/types/siginfo_t.h /usr/include/bits/types/sigval_t.h \
+ /usr/include/bits/siginfo-arch.h /usr/include/bits/siginfo-consts.h \
+ /usr/include/bits/types/sigevent_t.h /usr/include/bits/sigevent-consts.h \
+ /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+ /usr/include/bits/types/stack_t.h /usr/include/sys/ucontext.h \
+ /usr/include/bits/sigstack.h /usr/include/bits/ss_flags.h \
+ /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/param.h /usr/include/linux/param.h \
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h \
+ /usr/include/bits/mman-linux.h /usr/include/ctype.h \
+ /usr/include/assert.h /usr/include/getopt.h \
+ /usr/include/bits/getopt_core.h /usr/include/bits/getopt_ext.h \
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+ /usr/include/bits/environments.h /usr/include/bits/confname.h \
+ /usr/include/bits/getopt_posix.h /usr/include/bits/unistd.h \
+ ../../../../src/tools/../../src/../src/tools/pmempool/common.h \
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stdbool.h \
+ ../../../../src/tools/../../src/../src/common/queue.h \
+ ../../../../src/tools/../../src/../src/libpmemlog/log.h \
+ ../../../../src/tools/../../src/../src/common/ctl.h \
+ ../../../../src/tools/../../src/../src/common/queue.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../../../../src/tools/../../src/../src/common/out.h \
+ ../../../../src/tools/../../src/../src/common/util.h \
+ ../../../../src/tools/../../src/../src/common/util.h \
+ ../../../../src/tools/../../src/../src/common/os_thread.h \
+ /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/bits/types/struct_tm.h \
+ /usr/include/bits/types/struct_itimerspec.h \
+ ../../../../src/tools/../../src/../src/common/pool_hdr.h \
+ ../../../../src/tools/../../src/../src/common/uuid.h \
+ ../../../../src/tools/../../src/../src/common/shutdown_state.h \
+ ../../../../src/tools/../../src/../src/libpmemblk/blk.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/action.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/action_base.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/base.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/atomic.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/atomic_base.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/types.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/ctl.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/iterator.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/iterator_base.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/lists_atomic.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/lists_atomic_base.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/thread.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/pool.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/pool_base.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/tx.h \
+ ../../../../src/tools/../../src/../src/include/libpmemobj/tx_base.h \
+ /usr/include/setjmp.h /usr/include/bits/setjmp.h \
+ /usr/include/bits/setjmp2.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/lane.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/ulog.h \
+ ../../../../src/tools/../../src/../src/common/vec.h \
+ ../../../../src/tools/../../src/../src/common/valgrind_internal.h \
+ ../../../../src/tools/../../src/../src/common/valgrind/valgrind.h \
+ ../../../../src/tools/../../src/../src/common/valgrind/helgrind.h \
+ ../../../../src/tools/../../src/../src/common/valgrind/valgrind.h \
+ ../../../../src/tools/../../src/../src/common/valgrind/drd.h \
+ ../../../../src/tools/../../src/../src/common/valgrind/pmemcheck.h \
+ ../../../../src/tools/../../src/../src/common/valgrind/memcheck.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/pmemops.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/ulog.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/memops.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/lane.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/pmalloc.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/memops.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/palloc.h \
+ ../../../../src/tools/../../src/../src/common/valgrind_internal.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/stats.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/list.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/pmalloc.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/obj.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/sync.h \
+ ../../../../src/tools/../../src/../src/common/out.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/ctl_debug.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/memblock.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/heap_layout.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/heap_layout.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/tx.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/obj.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/heap.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/bucket.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/container.h \
+ ../../../../src/tools/../../src/../src/libpmemobj/memblock.h \
+ ../../../../src/tools/../../src/../src/libpmemblk/btt_layout.h \
+ ../../../../src/tools/../../src/../src/tools/pmempool/output.h \
+ ../../../../src/tools/../../src/../src/include/libpmem.h \
+ ../../../../src/tools/../../src/../src/include/libpmemblk.h \
+ ../../../../src/tools/../../src/../src/include/libpmemlog.h \
+ /usr/include/sys/uio.h /usr/include/bits/types/struct_iovec.h \
+ /usr/include/bits/uio_lim.h \
+ ../../../../src/tools/../../src/../src/libpmemblk/btt.h \
+ ../../../../src/tools/../../src/../src/common/file.h \
+ /usr/include/dirent.h /usr/include/bits/dirent.h \
+ ../../../../src/tools/../../src/../src/common/os.h \
+ ../../../../src/tools/../../src/../src/common/errno_freebsd.h \
+ ../../../../src/tools/../../src/../src/common/os.h \
+ ../../../../src/tools/../../src/../src/common/set.h \
+ ../../../../src/tools/../../src/../src/common/vec.h \
+ ../../../../src/tools/../../src/../src/common/pool_hdr.h \
+ ../../../../src/tools/../../src/../src/include/librpmem.h \
+ ../../../../src/tools/../../src/../src/common/mmap.h \
+ ../../../../src/tools/../../src/../src/common/util_pmem.h \
+ ../../../../src/tools/../../src/../src/common/badblock.h \
+ ../../../../src/tools/../../src/../src/common/set.h
+../../../../src/tools/../../src/../src/tools/pmempool/common.c :
+ /usr/include/stdc-predef.h /usr/include/stdlib.h :
+ /usr/include/bits/libc-header-start.h /usr/include/features.h :
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h :
+ /usr/include/bits/long-double.h /usr/include/gnu/stubs.h :
+ /usr/include/gnu/stubs-64.h :
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stddef.h :
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h :
+ /usr/include/bits/floatn.h /usr/include/sys/types.h :
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h :
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h :
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h :
+ /usr/include/bits/stdint-intn.h /usr/include/endian.h :
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h :
+ /usr/include/bits/byteswap-16.h /usr/include/bits/uintn-identity.h :
+ /usr/include/sys/select.h /usr/include/bits/select.h :
+ /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h :
+ /usr/include/bits/types/struct_timeval.h :
+ /usr/include/bits/types/struct_timespec.h /usr/include/bits/select2.h :
+ /usr/include/sys/sysmacros.h /usr/include/bits/sysmacros.h :
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h :
+ /usr/include/bits/pthreadtypes-arch.h /usr/include/alloca.h :
+ /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h :
+ /usr/include/bits/stdlib.h /usr/include/stdio.h :
+ /usr/include/bits/types/__FILE.h /usr/include/bits/types/FILE.h :
+ /usr/include/libio.h /usr/include/_G_config.h :
+ /usr/include/bits/types/__mbstate_t.h :
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stdarg.h :
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h :
+ /usr/include/bits/stdio.h /usr/include/bits/stdio2.h :
+ /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h :
+ /usr/include/bits/fcntl.h /usr/include/bits/fcntl-linux.h :
+ /usr/include/bits/fcntl2.h :
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stdint.h :
+ /usr/include/stdint.h /usr/include/bits/wchar.h :
+ /usr/include/bits/stdint-uintn.h /usr/include/string.h :
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h :
+ /usr/include/strings.h /usr/include/bits/strings_fortified.h :
+ /usr/include/bits/string_fortified.h /usr/include/err.h :
+ /usr/include/sys/param.h :
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/limits.h :
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/syslimits.h :
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h :
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h :
+ /usr/include/bits/posix2_lim.h /usr/include/signal.h :
+ /usr/include/bits/signum.h /usr/include/bits/signum-generic.h :
+ /usr/include/bits/types/sig_atomic_t.h :
+ /usr/include/bits/types/siginfo_t.h /usr/include/bits/types/sigval_t.h :
+ /usr/include/bits/siginfo-arch.h /usr/include/bits/siginfo-consts.h :
+ /usr/include/bits/types/sigevent_t.h /usr/include/bits/sigevent-consts.h :
+ /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h :
+ /usr/include/bits/types/stack_t.h /usr/include/sys/ucontext.h :
+ /usr/include/bits/sigstack.h /usr/include/bits/ss_flags.h :
+ /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h :
+ /usr/include/bits/param.h /usr/include/linux/param.h :
+ /usr/include/asm/param.h /usr/include/asm-generic/param.h :
+ /usr/include/sys/mman.h /usr/include/bits/mman.h :
+ /usr/include/bits/mman-linux.h /usr/include/ctype.h :
+ /usr/include/assert.h /usr/include/getopt.h :
+ /usr/include/bits/getopt_core.h /usr/include/bits/getopt_ext.h :
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h :
+ /usr/include/bits/environments.h /usr/include/bits/confname.h :
+ /usr/include/bits/getopt_posix.h /usr/include/bits/unistd.h :
+ ../../../../src/tools/../../src/../src/tools/pmempool/common.h :
+ /usr/lib/gcc/x86_64-redhat-linux/7/include/stdbool.h :
+ ../../../../src/tools/../../src/../src/common/queue.h :
+ ../../../../src/tools/../../src/../src/libpmemlog/log.h :
+ ../../../../src/tools/../../src/../src/common/ctl.h :
+ ../../../../src/tools/../../src/../src/common/queue.h :
+ /usr/include/errno.h /usr/include/bits/errno.h :
+ /usr/include/linux/errno.h /usr/include/asm/errno.h :
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h :
+ ../../../../src/tools/../../src/../src/common/out.h :
+ ../../../../src/tools/../../src/../src/common/util.h :
+ ../../../../src/tools/../../src/../src/common/util.h :
+ ../../../../src/tools/../../src/../src/common/os_thread.h :
+ /usr/include/time.h /usr/include/bits/time.h :
+ /usr/include/bits/types/struct_tm.h :
+ /usr/include/bits/types/struct_itimerspec.h :
+ ../../../../src/tools/../../src/../src/common/pool_hdr.h :
+ ../../../../src/tools/../../src/../src/common/uuid.h :
+ ../../../../src/tools/../../src/../src/common/shutdown_state.h :
+ ../../../../src/tools/../../src/../src/libpmemblk/blk.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/action.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/action_base.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/base.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/atomic.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/atomic_base.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/types.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/ctl.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/iterator.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/iterator_base.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/lists_atomic.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/lists_atomic_base.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/thread.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/pool.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/pool_base.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/tx.h :
+ ../../../../src/tools/../../src/../src/include/libpmemobj/tx_base.h :
+ /usr/include/setjmp.h /usr/include/bits/setjmp.h :
+ /usr/include/bits/setjmp2.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/lane.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/ulog.h :
+ ../../../../src/tools/../../src/../src/common/vec.h :
+ ../../../../src/tools/../../src/../src/common/valgrind_internal.h :
+ ../../../../src/tools/../../src/../src/common/valgrind/valgrind.h :
+ ../../../../src/tools/../../src/../src/common/valgrind/helgrind.h :
+ ../../../../src/tools/../../src/../src/common/valgrind/valgrind.h :
+ ../../../../src/tools/../../src/../src/common/valgrind/drd.h :
+ ../../../../src/tools/../../src/../src/common/valgrind/pmemcheck.h :
+ ../../../../src/tools/../../src/../src/common/valgrind/memcheck.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/pmemops.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/ulog.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/memops.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/lane.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/pmalloc.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/memops.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/palloc.h :
+ ../../../../src/tools/../../src/../src/common/valgrind_internal.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/stats.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/list.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/pmalloc.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/obj.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/sync.h :
+ ../../../../src/tools/../../src/../src/common/out.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/ctl_debug.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/memblock.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/heap_layout.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/heap_layout.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/tx.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/obj.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/heap.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/bucket.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/container.h :
+ ../../../../src/tools/../../src/../src/libpmemobj/memblock.h :
+ ../../../../src/tools/../../src/../src/libpmemblk/btt_layout.h :
+ ../../../../src/tools/../../src/../src/tools/pmempool/output.h :
+ ../../../../src/tools/../../src/../src/include/libpmem.h :
+ ../../../../src/tools/../../src/../src/include/libpmemblk.h :
+ ../../../../src/tools/../../src/../src/include/libpmemlog.h :
+ /usr/include/sys/uio.h /usr/include/bits/types/struct_iovec.h :
+ /usr/include/bits/uio_lim.h :
+ ../../../../src/tools/../../src/../src/libpmemblk/btt.h :
+ ../../../../src/tools/../../src/../src/common/file.h :
+ /usr/include/dirent.h /usr/include/bits/dirent.h :
+ ../../../../src/tools/../../src/../src/common/os.h :
+ ../../../../src/tools/../../src/../src/common/errno_freebsd.h :
+ ../../../../src/tools/../../src/../src/common/os.h :
+ ../../../../src/tools/../../src/../src/common/set.h :
+ ../../../../src/tools/../../src/../src/common/vec.h :
+ ../../../../src/tools/../../src/../src/common/pool_hdr.h :
+ ../../../../src/tools/../../src/../src/include/librpmem.h :
+ ../../../../src/tools/../../src/../src/common/mmap.h :
+ ../../../../src/tools/../../src/../src/common/util_pmem.h :
+ ../../../../src/tools/../../src/../src/common/badblock.h :
+ ../../../../src/tools/../../src/../src/common/set.h :

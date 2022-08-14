@@ -1,0 +1,281 @@
+diff --git a/lackey/lackey.h b/lackey/lackey.h
+index e2db7c89c..3c73bf42a 100644
+--- a/lackey/lackey.h
++++ b/lackey/lackey.h
+@@ -7,7 +7,9 @@ typedef
+    enum {
+       VG_USERREQ__DUMP_STATS = VG_USERREQ_TOOL_BASE('L','K'),
+       VG_USERREQ__START_INSTRUMENTATION,
+-      VG_USERREQ__STOP_INSTRUMENTATION
++      VG_USERREQ__STOP_INSTRUMENTATION,
++      VG_USERREQ__OPERATION_START,
++      VG_USERREQ__OPERATION_END
+    } Vg_CallgrindClientRequest;
+ 
+ // Starts full instrumentation if not already switched on.
+@@ -20,6 +22,14 @@ typedef
+   VALGRIND_DO_CLIENT_REQUEST_STMT(VG_USERREQ__STOP_INSTRUMENTATION, \
+                                   0, 0, 0, 0, 0)
+ 
++// Indicates start of persistent operation.
++#define LACKEY_OPERATION_START\
++  VALGRIND_DO_CLIENT_REQUEST_STMT(VG_USERREQ__OPERATION_START, \
++                                  0, 0, 0, 0, 0)
+ 
++// Indicates end of persistent operation.
++#define LACKEY_OPERATION_END\
++  VALGRIND_DO_CLIENT_REQUEST_STMT(VG_USERREQ__OPERATION_END, \
++                                  0, 0, 0, 0, 0)
+ 
+ #endif /* __LACKEY_H */
+diff --git a/lackey/lk_main.c b/lackey/lk_main.c
+index ddfe9221e..7457c2720 100644
+--- a/lackey/lk_main.c
++++ b/lackey/lk_main.c
+@@ -408,12 +408,19 @@ static const HChar* nameOfFenceTypeIndex ( Int i )
+ }
+ /* --- Counts --- */
+ #define FLUSH_LIMIT 256
++#define STORE_LIMIT 2560
+ static ULong detailCounts[N_OPS][N_TYPES];
+ 
+ static ULong flushHistogram[FLUSH_LIMIT];
+ 
+ static ULong currentFlushCount;
+ 
++static ULong storeHistogram[STORE_LIMIT];
++
++static ULong currentStoreCount;
++
++static Addr currentDirtyCachelines[STORE_LIMIT];
++
+ /* The helper that is called from the instrumented code. */
+ static VG_REGPARM(1)
+ void increment_detail(ULong* detail)
+@@ -421,6 +428,7 @@ void increment_detail(ULong* detail)
+    (*detail)++;
+ }
+ 
++/*
+ static VG_REGPARM(2)
+ void increment_pm_stores(ULong* store_count, Addr addr) {
+     // Skip all non-PM addresses
+@@ -428,6 +436,7 @@ void increment_pm_stores(ULong* store_count, Addr addr) {
+         (*store_count)++;
+     }
+ }
++*/
+ 
+ static VG_REGPARM(2)
+ void record_flush_count(ULong* histogram, ULong* bucket) {
+@@ -445,6 +454,37 @@ void reset_flush(ULong* flush_count) {
+     *flush_count = 0;
+ }
+ 
++static VG_REGPARM(2)
++void record_store_count(ULong* histogram, ULong* bucket) {
++    if (*bucket < STORE_LIMIT)
++        (*(histogram+*bucket))++;
++}
++
++static VG_REGPARM(3)
++void record_store(Addr* store_tracker, ULong* store_count, Addr addr) {
++    // Skip all non-PM addresses
++    if (addr < 0x10000000000ul && addr > 0x30000000000ul) {
++       return;
++    }
++    ULong cl_addr = (addr) - ((addr) % 64); 
++    if (*store_count > STORE_LIMIT)
++        tl_assert(0);
++    for (ULong i = 0; i < *store_count; i++) {
++        if (store_tracker[i] == cl_addr) 
++            return;
++    }
++    if (*store_count == STORE_LIMIT)
++        tl_assert(0);
++    store_tracker[*store_count] = cl_addr; 
++    (*store_count)++;
++}
++
++static VG_REGPARM(1)
++void reset_store(ULong* store_count) {
++    *store_count = 0;
++}
++
++
+ /* A helper that adds the instrumentation for a detail.  guard ::
+    Ity_I1 is the guarding condition for the event.  If NULL it is
+    assumed to mean "always True". */
+@@ -470,10 +510,11 @@ static void instrument_store_detail(IRSB* sb, IRAtom* addr)
+    IRDirty* di;
+    IRExpr** argv;
+ 
+-   argv = mkIRExprVec_2(mkIRExpr_HWord((HWord)&n_pm_stores),
+-                         addr);
+-   di = unsafeIRDirty_0_N( 2, "increment_pm_stores",
+-                              VG_(fnptr_to_fnentry)( &increment_pm_stores), 
++   argv = mkIRExprVec_3(mkIRExpr_HWord((HWord)&currentDirtyCachelines),
++                        mkIRExpr_HWord((HWord)&currentStoreCount),
++                        addr);
++   di = unsafeIRDirty_0_N( 3, "record_store",
++                              VG_(fnptr_to_fnentry)( &record_store), 
+                               argv);
+ //   if (guard) di->guard = guard;
+    addStmtToIRSB( sb, IRStmt_Dirty(di) );
+@@ -538,6 +579,21 @@ static void instrument_fence_detail(IRSB* sb, Op op, IRMBusEvent ev)
+ //   if (guard) di->guard = guard;
+    addStmtToIRSB( sb, IRStmt_Dirty(di) );
+ 
++   argv = mkIRExprVec_2( mkIRExpr_HWord( (HWord)&storeHistogram ),
++                          mkIRExpr_HWord( (HWord)&currentStoreCount ));
++   di = unsafeIRDirty_0_N( 2, "record_store_count",
++                              VG_(fnptr_to_fnentry)( &record_store_count ), 
++                              argv);
++//   if (guard) di->guard = guard;
++   addStmtToIRSB( sb, IRStmt_Dirty(di) );
++   argv = mkIRExprVec_1( mkIRExpr_HWord( (HWord)&currentStoreCount ) );
++   di = unsafeIRDirty_0_N( 1, "reset_store",
++                              VG_(fnptr_to_fnentry)( &reset_store), 
++                              argv);
++//   if (guard) di->guard = guard;
++   addStmtToIRSB( sb, IRStmt_Dirty(di) );
++
++
+ 
+ }
+ 
+@@ -557,6 +613,40 @@ static void print_details ( void )
+    }
+ }
+ 
++/* Summarize and print the details. */
++static void print_store_details ( void )
++{
++   Int bucket;
++   ULong weighted_count = 0;
++   ULong count = 0;
++   ULong median = 0;
++   VG_(umsg)("\n");
++   VG_(umsg)("\n");
++   VG_(umsg)("   Store Histogram [Starts at 1, 64 in a row] \n");
++   VG_(umsg)("   -------------------------------------------\n");
++   for (bucket = 1; bucket < STORE_LIMIT; bucket++) {
++      VG_(umsg)(" %-llu",
++                storeHistogram[bucket]
++      );
++      weighted_count += bucket*storeHistogram[bucket];
++      count += storeHistogram[bucket];
++      if (bucket % 64 == 0) VG_(umsg)("\n");
++   }
++   ULong curr_count = 0;
++   for (bucket = 1; bucket < STORE_LIMIT; bucket++) {
++      curr_count += storeHistogram[bucket];
++      if (curr_count > (count/2)) {
++          median = bucket;
++          break;
++      }
++   }
++   VG_(umsg)("\n");
++   VG_(umsg)("Tracked Stores: %f\n", (Double) weighted_count);
++   VG_(umsg)("Average number of PM stores per operation: %f\n", (Double) weighted_count / count );
++   VG_(umsg)("Median number of PM stores per operation: %llu\n", median );
++}
++
++
+ /* Summarize and print the details. */
+ static void print_flush_details ( void )
+ {
+@@ -678,16 +768,17 @@ static VG_REGPARM(2) void trace_load(Addr addr, SizeT size)
+    //VG_(printf)(" L %012lx,%lu\n", addr, size);
+ }
+ 
+-static VG_REGPARM(2) void trace_store(Addr addr, SizeT size)
++static VG_REGPARM(3) void trace_store(Addr addr, SizeT size, ULong* storeCount)
+ {
+ 
+-   if (! lk_trace_state)
++   if (!lk_trace_state)
+        return;
+    // Skip all non-PM addresses
+    if (addr >= 0x10000000000ul && addr < 0x30000000000ul) {
+        VG_(printf)("STORE %#lx %lu\n", addr, size);
+-          VG_(pp_ExeContext)(
+-                  VG_(record_ExeContext)(VG_(get_running_tid)(), 0));
++       VG_(printf)("storeCount: %llu \n", *storeCount);
++       VG_(pp_ExeContext)(
++               VG_(record_ExeContext)(VG_(get_running_tid)(), 0));
+    }
+ }
+ 
+@@ -754,6 +845,11 @@ static void flushEvents(IRSB* sb)
+           di = unsafeIRDirty_0_N( 0, helperName, 
+                   VG_(fnptr_to_fnentry)( helperAddr ),
+                   mkIRExprVec_0() );
++      } else if (helperAddr == trace_store) {
++          argv = mkIRExprVec_3( ev->addr, mkIRExpr_HWord( ev->size ), mkIRExpr_HWord((HWord)&currentStoreCount));
++          di   = unsafeIRDirty_0_N( /*regparms*/3, 
++                  helperName, VG_(fnptr_to_fnentry)( helperAddr ),
++                  argv );
+       } else {
+           argv = mkIRExprVec_2( ev->addr, mkIRExpr_HWord( ev->size ) );
+           di   = unsafeIRDirty_0_N( /*regparms*/2, 
+@@ -940,8 +1036,29 @@ static void lk_post_clo_init(void)
+       currentFlushCount = 0; 
+    }
+    n_pm_stores = 0;
++   for (bucket = 0; bucket < STORE_LIMIT; bucket++) {
++       storeHistogram[bucket] = 0;
++   }
++   // This part is not strictly necessary
++   for (bucket = 0; bucket < STORE_LIMIT; bucket++) {
++       currentDirtyCachelines[bucket] = 0;
++   }
++   currentStoreCount = 0;
++}
++
++/*
++static void reset_store_count(void)
++{
++    currentStoreCount = 0;
+ }
+ 
++static void record_store_count (void)
++{
++    storeHistogram[currentStoreCount]++;
++    currentStoreCount = 0;
++} 
++*/
++
+ static
+ IRSB* lk_instrument ( VgCallbackClosure* closure,
+                       IRSB* sbIn, 
+@@ -1358,7 +1475,9 @@ static void lk_fini(Int exitcode)
+ 
+    if (clo_flush_counts) {
+       VG_(umsg)("\n");
+-      VG_(umsg)("IR-level counts by type:\n");
++      print_store_details();
++      VG_(umsg)("\n");
++      VG_(umsg)("\n");
+       print_flush_details();
+    }
+ 
+@@ -1424,6 +1543,18 @@ Bool lk_handle_client_request (ThreadId tid, UWord *args, UWord *ret)
+      *ret = 0;                 /* meaningless */
+      break;
+ 
++   case VG_USERREQ__OPERATION_START:
++     // reset_store_count();
++     VG_(printf)("Store Count%llu\n", currentStoreCount);
++     *ret = 0;                 /* meaningless */
++     break;
++
++   case VG_USERREQ__OPERATION_END:
++     // update Histogram
++     // record_store_count();
++     *ret = 0;                 /* meaningless */
++     break;
++
+    default:
+       return False;
+    }

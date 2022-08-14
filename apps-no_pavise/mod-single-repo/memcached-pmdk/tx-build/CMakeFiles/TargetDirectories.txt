@@ -1,0 +1,4 @@
+/nobackup/swapnilh/mod-single-repo/memcached-1.2.4/tx-build/CMakeFiles/rebuild_cache.dir
+/nobackup/swapnilh/mod-single-repo/memcached-1.2.4/tx-build/CMakeFiles/immer_memcached.dir
+/nobackup/swapnilh/mod-single-repo/memcached-1.2.4/tx-build/CMakeFiles/edit_cache.dir
+/nobackup/swapnilh/mod-single-repo/memcached-1.2.4/tx-build/CMakeFiles/memcached.dir
