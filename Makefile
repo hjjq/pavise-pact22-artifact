@@ -18,12 +18,19 @@ CONFIG_PIN = -DPAVISE_VERIFY_STORE -DPAVISE_PINTOOL
 ERR_INJ_EVAL = -DPAVISE_ERR_INJ_EVAL
 RUNTIME_EVAL = -DPAVISE_RUNTIME_EVAL
 
-all:
-	g++ $(INC) $(CXXFLAGS) $(WARNINGS) -c -o $(BIN)/pavise_memops.o $(SRC)/pavise_memops.c
-	g++ $(INC) $(CXXFLAGS) $(WARNINGS) $(CONFIG_C) -c -L$(LIB) -L$(ISAL)/lib -o $(BIN)/pavise.o $(SRC)/pavise.cpp -lisal
-	g++ $(INC) $(CXXFLAGS) $(WARNINGS) -c -L$(LIB) -L$(ISAL)/lib  -o $(BIN)/pavise_interface.o $(SRC)/pavise_interface.cpp -lisal
+a_runtime_eval:
+	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -c -o $(BIN)/pavise_memops.o $(SRC)/pavise_memops.c
+	g++ $(INC) $(WARNINGS) $(CONFIG_A) $(RUNTIME_EVAL) -O2 -g -fpic -march=native -c -L$(LIB) -L$(ISAL)/lib -o $(BIN)/pavise.o $(SRC)/pavise.cpp -lisal
+	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -c -L$(LIB) -L$(ISAL)/lib  -o $(BIN)/pavise_interface.o $(SRC)/pavise_interface.cpp -lisal
 	rm -f $(LIB)/*
-	g++ $(INC) $(CXXFLAGS) $(WARNINGS) -shared -L$(LIB) -L$(ISAL)/lib -o $(LIB)/libpavise_interface.so $(BIN)/pavise.o $(BIN)/pavise_memops.o $(BIN)/pavise_interface.o -lisal
+	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -shared -L$(LIB) -L$(ISAL)/lib -o $(LIB)/libpavise_interface.so $(BIN)/pavise.o  $(BIN)/pavise_memops.o $(BIN)/pavise_interface.o -lisal
+
+#all:
+#	g++ $(INC) $(CXXFLAGS) $(WARNINGS) -c -o $(BIN)/pavise_memops.o $(SRC)/pavise_memops.c
+#	g++ $(INC) $(CXXFLAGS) $(WARNINGS) $(CONFIG_C) -c -L$(LIB) -L$(ISAL)/lib -o $(BIN)/pavise.o $(SRC)/pavise.cpp -lisal
+#	g++ $(INC) $(CXXFLAGS) $(WARNINGS) -c -L$(LIB) -L$(ISAL)/lib  -o $(BIN)/pavise_interface.o $(SRC)/pavise_interface.cpp -lisal
+#	rm -f $(LIB)/*
+#	g++ $(INC) $(CXXFLAGS) $(WARNINGS) -shared -L$(LIB) -L$(ISAL)/lib -o $(LIB)/libpavise_interface.so $(BIN)/pavise.o $(BIN)/pavise_memops.o $(BIN)/pavise_interface.o -lisal
 
 #no verification
 nv:
@@ -68,12 +75,6 @@ pin:
 	rm -f $(LIB)/*
 	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -shared -L$(LIB) -L$(ISAL)/lib -o $(LIB)/libpavise_interface.so $(BIN)/pavise.o  $(BIN)/pavise_memops.o $(BIN)/pavise_interface.o -lisal
 
-a_runtime_eval:
-	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -c -o $(BIN)/pavise_memops.o $(SRC)/pavise_memops.c
-	g++ $(INC) $(WARNINGS) $(CONFIG_A) $(RUNTIME_EVAL) -O2 -g -fpic -march=native -c -L$(LIB) -L$(ISAL)/lib -o $(BIN)/pavise.o $(SRC)/pavise.cpp -lisal
-	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -c -L$(LIB) -L$(ISAL)/lib  -o $(BIN)/pavise_interface.o $(SRC)/pavise_interface.cpp -lisal
-	rm -f $(LIB)/*
-	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -shared -L$(LIB) -L$(ISAL)/lib -o $(LIB)/libpavise_interface.so $(BIN)/pavise.o  $(BIN)/pavise_memops.o $(BIN)/pavise_interface.o -lisal
 
 a_err_inj_eval:
 	g++ $(INC) $(WARNINGS) -O2 -g -fpic -march=native -c -o $(BIN)/pavise_memops.o $(SRC)/pavise_memops.c
