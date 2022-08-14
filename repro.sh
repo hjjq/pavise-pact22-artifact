@@ -9,6 +9,9 @@ popd () {
 }
 export pushd popd
 
+
+source setup.sh
+echo "PAVISE_ROOT = $PAVISE_ROOT"
 ### Compile ISA-L
 echo "======================================="
 echo "Compiling ISA-L... (~ mins)"
@@ -72,7 +75,7 @@ printf "CC=clang
 CXX=clang++
 EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager -pavise=pavisenoload_conservative" > $PAVISE_ROOT/pmdk-1.10/user.mk
 # Modify LD_LIBRARY_PATH 
-export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10-no_pavise/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
 ### Recompile PMDK with new pass
 echo "Recompiling PMDK with new pass... (~3 min)"
 pushd $PAVISE_ROOT/pmdk-1.10
@@ -457,6 +460,24 @@ sleep 3 # make sure the server is fully terminated
 echo "Finished running redis."
 popd
 
+
+##################################################
+# Setup for no pavise runs
+##################################################
+### Build vacation PMDK (WHISPER)
+echo "======================================="
+echo "Prepare environment for real applications..."
+echo "Compiling WHISPER PMDK..."
+pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/pmdk
+bash compile.sh &> /dev/null
+if [ $? -ne 0 ];
+then
+    echo "ERROR! PMDK build failed."
+    exit 1
+fi
+echo "PMDK compilation finished successfully."
+popd
+
 ##################################################
 # Preproduce memcached-L  + no Pavise 
 ##################################################
@@ -538,3 +559,37 @@ memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis-no_
 kill $PID_redis
 sleep 3 # make sure the server is fully terminated
 echo "Finished running redis"
+
+
+##########
+# Reproduce memcached-W  + no Pavise
+##########
+echo "======================================="
+echo "Preproducing memcached-W + no Pavise"
+
+########## Build memcached-W
+echo "Building memcached-W..."
+pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/memcached-pmdk
+bash compile.sh  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! memcached-W build failed." 
+    exit 1
+fi
+echo "memcached-W compilation finished successfully."
+popd
+########## Run memcached-W
+echo "Starting memcached-W server..."
+pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/memcached-pmdk/tx-build
+rm -rf /pmem0p1/kevin/pools/*
+./memcached /pmem0p1/kevin/pools/memcached-pmdk -u root -p 11211 -l 127.0.0.1 -t 1 &
+PID_memcached=$!
+sleep 5 # make sure the server is fully started
+popd
+pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/libmemcached-1.0.18/clients
+echo "Starting memcached-W client..."
+./memaslap -s 127.0.0.1:11211 -c 4 -x 100000 -T 4 -X 512 -F ./run.cnf -d 1 &> $PAVISE_ROOT/results/memcached-W-no_pavise
+kill $PID_memcached
+sleep 3 # make sure the server is fully terminated
+echo "Finished running memcached-W."
+popd
