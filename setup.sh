@@ -16,4 +16,4 @@ export PATH=/ssd1/llvm-project/build/bin:$PATH
 
 
 # Edit file paths in whitelist
-sed "s@PAVISE_ROOT@$PAVISE_ROOT@g" llvm/llvmlog_template > llvm/llvmlog
+sed "s@PAVISE_ROOT@$PAVISE_ROOT@g" $PAVISE_LLVM_ROOT/llvmlog_template > $PAVISE_LLVM_ROOT/llvmlog
