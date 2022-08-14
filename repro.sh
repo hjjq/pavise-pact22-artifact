@@ -510,4 +510,31 @@ sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-L."
 popd
 
-
+### Preproduce redis  + no Pavise
+echo "======================================="
+echo "Preproducing redis + no Pavise"
+## Build redis
+echo "Building redis..."
+pushd $PAVISE_ROOT/apps-no_pavise/redis
+make -j USE_PMDK=yes STD=-std=gnu99  &> /dev/null
+if [ $? -ne 0 ];
+then
+    echo "ERROR! redis build failed."
+    exit 1
+fi
+echo "redis compilation finished successfully."
+popd
+### Run redis
+echo "Running redis with no pavise"
+pushd $PAVISE_ROOT/apps-no_pavise/redis
+rm -rf /pmem0p1/kevin/pools/*
+# First shutdown any existing redis servers
+./src/redis-cli shutdown  &> /dev/null
+./src/redis-server redis.conf &
+PID_redis=$!
+sleep 5 # make sure the server is fully started
+echo "Starting redis client..."
+memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis-no_pavise
+kill $PID_redis
+sleep 3 # make sure the server is fully terminated
+echo "Finished running
