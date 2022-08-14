@@ -1,0 +1,470 @@
+Watchpoint 2: (char[128])*0x10003effe00
+Watchpoint 3: (char[128])*0x10003f00000
+Continuing.
+[Switching to Thread 656]
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 127 times>
+New value = '\000' <repeats 107 times>, "\004", '\000' <repeats 19 times>
+do_slabs_free (ptr=ptr@entry=0x10003effe44, size=size@entry=0, id=id@entry=8) at slabs.c:542
+542	        if (pslab_contains((char *)it)) {
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 107 times>, "\004", '\000' <repeats 19 times>
+New value = '\000' <repeats 107 times>, "D", '\000' <repeats 19 times>
+0x00000000001290c7 in do_slabs_free (ptr=ptr@entry=0x10003effe44, size=size@entry=0, id=id@entry=8) at slabs.c:543
+543	            it->it_flags |= ITEM_PSLAB;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 107 times>, "D", '\000' <repeats 19 times>
+New value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 33 times>, "D", '\000' <repeats 19 times>
+do_slabs_free (ptr=ptr@entry=0x10003effe44, size=size@entry=0, id=id@entry=8) at slabs.c:550
+550	        if (it->next) it->next->prev = it;
+Undefined command: "cc".  Try "help".
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 33 times>, "D", '\000' <repeats 19 times>
+New value = '\000' <repeats 68 times>, "\304\374\357\003\000\001\000\000\304\377\357\003\000\001", '\000' <repeats 25 times>, "D", '\000' <repeats 19 times>
+0x00000000001290fd in do_slabs_free (ptr=ptr@entry=0x10003efffc4, size=size@entry=0, id=id@entry=8) at slabs.c:550
+550	        if (it->next) it->next->prev = it;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\374\357\003\000\001\000\000\304\377\357\003\000\001", '\000' <repeats 25 times>, "D", '\000' <repeats 19 times>
+New value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 33 times>, "D", '\000' <repeats 19 times>
+0x00000000001285ca in do_slabs_alloc (size=size@entry=330, id=id@entry=8, total_bytes=total_bytes@entry=0x749bb00, flags=flags@entry=0) at slabs.c:413
+413	        if (it->next) it->next->prev = 0;
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = '\000' <repeats 127 times>
+New value = "\000\000\000-1168204", '\000' <repeats 116 times>
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:310
+310	../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S: No such file or directory.
+#0  __memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:310
+#1  0x00000000001304fa in memcpy (__len=15, __src=0x8036c70, __dest=<optimized out>) at /usr/include/x86_64-linux-gnu/bits/string_fortified.h:34
+#2  do_item_alloc (key=0x8036c70 "memtier-1168204", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=<optimized out>) at items.c:346
+#3  0x0000000000132a22 in item_alloc (key=<optimized out>, nkey=<optimized out>, flags=<optimized out>, exptime=<optimized out>, nbytes=<optimized out>)
+    at thread.c:538
+#4  0x000000000011f9d3 in process_bin_update (c=0x8036a40) at memcached.c:2434
+#5  complete_nread_binary (c=0x8036a40) at memcached.c:2645
+#6  0x0000000000125227 in complete_nread (c=0x8036a40) at memcached.c:2702
+#7  drive_machine (c=0x8036a40) at memcached.c:5566
+#8  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#9  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#10 0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#11 0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#12 0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#13 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "\000\000\000-1168204", '\000' <repeats 116 times>
+New value = "ier-1168204", '\000' <repeats 116 times>
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:311
+311	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+#0  __memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:311
+#1  0x00000000001304fa in memcpy (__len=15, __src=0x8036c70, __dest=<optimized out>) at /usr/include/x86_64-linux-gnu/bits/string_fortified.h:34
+#2  do_item_alloc (key=0x8036c70 "memtier-1168204", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=<optimized out>) at items.c:346
+#3  0x0000000000132a22 in item_alloc (key=<optimized out>, nkey=<optimized out>, flags=<optimized out>, exptime=<optimized out>, nbytes=<optimized out>)
+    at thread.c:538
+#4  0x000000000011f9d3 in process_bin_update (c=0x8036a40) at memcached.c:2434
+#5  complete_nread_binary (c=0x8036a40) at memcached.c:2645
+#6  0x0000000000125227 in complete_nread (c=0x8036a40) at memcached.c:2702
+#7  drive_machine (c=0x8036a40) at memcached.c:5566
+#8  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#9  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#10 0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#11 0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#12 0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#13 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204", '\000' <repeats 116 times>
+New value = "ier-1168204\000x", '\000' <repeats 114 times>
+0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c70132 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#4  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#5  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#6  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#8  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#9  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#10 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000x", '\000' <repeats 114 times>
+New value = "ier-1168204\000xx", '\000' <repeats 113 times>
+0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c70132 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#4  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#5  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#6  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#8  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#9  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#10 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000xx", '\000' <repeats 113 times>
+New value = "ier-1168204\000xxx", '\000' <repeats 112 times>
+0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c70132 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#4  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#5  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#6  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#8  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#9  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#10 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000xxx", '\000' <repeats 112 times>
+New value = "ier-1168204\000xxxx", '\000' <repeats 111 times>
+0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c389c6 in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c70132 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#4  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#5  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#6  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#8  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#9  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#10 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000xxxx", '\000' <repeats 111 times>
+New value = "ier-1168204\000", 'x' <repeats 12 times>, '\000' <repeats 103 times>
+0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c70132 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#4  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#5  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#6  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#8  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#9  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#10 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 12 times>, '\000' <repeats 103 times>
+New value = "ier-1168204\000", 'x' <repeats 20 times>, '\000' <repeats 95 times>
+0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c70132 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#4  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#5  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#6  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#8  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#9  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#10 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 20 times>, '\000' <repeats 95 times>
+New value = "ier-1168204\000", 'x' <repeats 28 times>, '\000' <repeats 87 times>
+0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 28 times>, '\000' <repeats 87 times>
+New value = "ier-1168204\000", 'x' <repeats 36 times>, '\000' <repeats 79 times>
+0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 36 times>, '\000' <repeats 79 times>
+New value = "ier-1168204\000", 'x' <repeats 44 times>, '\000' <repeats 71 times>
+0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 44 times>, '\000' <repeats 71 times>
+New value = "ier-1168204\000", 'x' <repeats 52 times>, '\000' <repeats 63 times>
+0x0000000004c38c0a in memmove_nodrain_generic () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 52 times>, '\000' <repeats 63 times>
+New value = "ier-1168204\000", 'x' <repeats 84 times>, '\000' <repeats 31 times>
+0x0000000004c72be5 in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+Continuing.
+
+Thread 3 hit Watchpoint 3: (char[128])*0x10003f00000
+
+Old value = "ier-1168204\000", 'x' <repeats 84 times>, '\000' <repeats 31 times>
+New value = "ier-1168204\000", 'x' <repeats 116 times>
+0x0000000004c72c4e in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#0  0x0000000004c72c4e in memmove_movnt_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#1  0x0000000004c3f20d in memmove_nodrain_avx_clflush_wcbarrier () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#2  0x0000000004c3a8bd in pmem_memmove_nodrain () from /home/nvm-admin/pmdk-1.10/src/nondebug/libpmem.so.1
+#3  0x00000000001259c8 in drive_machine (c=0x8036a40) at memcached.c:5594
+#4  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x8036a40) at memcached.c:5825
+#5  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#6  0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#7  0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#8  0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#9  0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 33 times>, "D", '\000' <repeats 19 times>
+New value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 33 times>, "@", '\000' <repeats 19 times>
+do_slabs_alloc (size=size@entry=330, id=id@entry=8, total_bytes=total_bytes@entry=0x749bb00, flags=flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 33 times>, "@", '\000' <repeats 19 times>
+New value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 30 times>, "\001\000\000@", '\000' <repeats 19 times>
+do_slabs_alloc (size=size@entry=330, id=id@entry=8, total_bytes=total_bytes@entry=0x749bb00, flags=flags@entry=0) at slabs.c:418
+418	        p->sl_curr--;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\374\357\003\000\001", '\000' <repeats 30 times>, "\001\000\000@", '\000' <repeats 19 times>
+New value = '\000' <repeats 104 times>, "\001\000\000@", '\000' <repeats 19 times>
+do_item_alloc (key=0x803a390 "memtier-6263819", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=258) at items.c:331
+331	    if (settings.temp_lru &&
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 104 times>, "\001\000\000@", '\000' <repeats 19 times>
+New value = '\000' <repeats 104 times>, "\001\000\000@\b", '\000' <repeats 18 times>
+do_item_alloc (key=0x803a390 "memtier-6263819", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=258) at items.c:343
+343	    it->it_flags |= settings.use_cas ? ITEM_CAS : 0;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 104 times>, "\001\000\000@\b", '\000' <repeats 18 times>
+New value = '\000' <repeats 104 times>, "\001\000\000B\b", '\000' <repeats 18 times>
+do_item_alloc (key=0x803a390 "memtier-6263819", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=258) at items.c:345
+345	    it->nbytes = nbytes;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 104 times>, "\001\000\000B\b", '\000' <repeats 18 times>
+New value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000B\b", '\000' <repeats 18 times>
+do_item_alloc (key=0x803a390 "memtier-6263819", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=258) at items.c:346
+346	    memcpy(ITEM_key(it), key, nkey);
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000B\b", '\000' <repeats 18 times>
+New value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000B\b\017", '\000' <repeats 17 times>
+do_item_alloc (key=0x803a390 "memtier-6263819", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=258) at items.c:346
+346	    memcpy(ITEM_key(it), key, nkey);
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000B\b\017", '\000' <repeats 17 times>
+New value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000B\b\017", '\000' <repeats 14 times>, "memt"
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:311
+311	../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S: No such file or directory.
+#0  __memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:311
+#1  0x00000000001304fa in memcpy (__len=15, __src=0x803a390, __dest=<optimized out>) at /usr/include/x86_64-linux-gnu/bits/string_fortified.h:34
+#2  do_item_alloc (key=0x803a390 "memtier-6263819", 'x' <repeats 185 times>..., nkey=15, flags=0, exptime=0, nbytes=<optimized out>) at items.c:346
+#3  0x0000000000132a22 in item_alloc (key=<optimized out>, nkey=<optimized out>, flags=<optimized out>, exptime=<optimized out>, nbytes=<optimized out>)
+    at thread.c:538
+#4  0x000000000011f9d3 in process_bin_update (c=0x803a160) at memcached.c:2434
+#5  complete_nread_binary (c=0x803a160) at memcached.c:2645
+#6  0x0000000000125227 in complete_nread (c=0x803a160) at memcached.c:2702
+#7  drive_machine (c=0x803a160) at memcached.c:5566
+#8  0x00000000001267f1 in event_handler (fd=<optimized out>, which=<optimized out>, arg=0x803a160) at memcached.c:5825
+#9  0x0000000004fe98f8 in ?? () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#10 0x0000000004fea33f in event_base_loop () from /usr/lib/x86_64-linux-gnu/libevent-2.1.so.6
+#11 0x00000000001322f1 in worker_libevent (arg=0x423e630) at thread.c:376
+#12 0x00000000052236db in start_thread (arg=0x749c700) at pthread_create.c:463
+#13 0x000000000555c71f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000B\b\017", '\000' <repeats 14 times>, "memt"
+New value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000C\b\017", '\000' <repeats 14 times>, "memt"
+do_item_link (it=it@entry=0x10003effe44, hv=hv@entry=3549572501) at items.c:520
+520	        pmem_member_persist(it, it_flags);
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 100 times>, "\002\001\000\000\001\000\000C\b\017", '\000' <repeats 14 times>, "memt"
+New value = '\000' <repeats 92 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017", '\000' <repeats 14 times>, "memt"
+do_item_link (it=it@entry=0x10003effe44, hv=hv@entry=3549572501) at items.c:522
+522	        pmem_member_persist(it, time);
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 92 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017", '\000' <repeats 14 times>, "memt"
+New value = '\000' <repeats 92 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+0x000000000012dd85 in do_item_link (it=it@entry=0x10003effe44, hv=hv@entry=3549572501) at items.c:538
+538	    ITEM_set_cas(it, (settings.use_cas) ? get_cas_id() : 0);
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 92 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+New value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+do_item_link_q (it=it@entry=0x10003effe44) at items.c:423
+423	    if (it->next) it->next->prev = it;
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+New value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\002\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+do_item_link (it=it@entry=0x10003effe44, hv=hv@entry=3549572501) at items.c:542
+542	    item_stats_sizes_add(it);
+Continuing.
+
+Thread 3 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\002\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+New value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+0x000000000012b916 in do_item_remove (it=it@entry=0x10003effe44) at items.c:591
+591	    if (refcount_decr(it) == 0) {
+Continuing.
+[Switching to Thread 658]
+
+Thread 5 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+New value = '\000' <repeats 69 times>, "\232\066", '\000' <repeats 21 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+0x000000000013107c in do_item_crawl_q (it=it@entry=0x369a00 <crawlers+576>) at items.c:1883
+1883	            it->prev->next = it;
+Continuing.
+
+Thread 5 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 69 times>, "\232\066", '\000' <repeats 21 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+New value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+0x0000000000130ee2 in do_item_unlinktail_q (it=it@entry=0x369a00 <crawlers+576>) at items.c:1832
+1832	    if (it->prev) it->prev->next = it->next;
+Continuing.
+[Switching to Thread 659]
+
+Thread 6 hit Watchpoint 2: (char[128])*0x10003effe00
+
+Old value = '\000' <repeats 68 times>, "\304\377\357\003\000\001", '\000' <repeats 18 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+New value = '\000' <repeats 92 times>, "L\002\000\000\000\000\000\000\002\001\000\000\001\000\000C\b\017\000\000\000\000\000\000\003\000\000\000\000\000\000\000memt"
+0x000000000012b15a in do_item_unlink_q (it=it@entry=0x10003efffc4) at items.c:470
+470	    if (it->prev) it->prev->next = it->next;
+Continuing.
+
+Thread 6 received signal SIGTRAP, Trace/breakpoint trap.
+0x000000000551f7a0 in __GI___nanosleep (requested_time=requested_time@entry=0xd000ad0, remaining=remaining@entry=0x0)
+    at ../sysdeps/unix/sysv/linux/nanosleep.c:28
+28	../sysdeps/unix/sysv/linux/nanosleep.c: No such file or directory.
+Watchpoint 4: (char[128]) *0x10003effe00
+Watchpoint 5: (char[128]) *0x10003f00000
+Continuing.
+[Switching to Thread 658]
+
+Thread 5 hit Watchpoint 4: (char[128]) *0x10003effe00
+
+Old value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000D8\357\003\000\001\000\000\000\000\000\000\000\000\000\000\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+New value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 55 times>, "\276\066\000\000\000\000\000D8\357\003\000\001\000\000\000\000\000\000\000\000\000\000\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+0x000000000013107c in do_item_crawl_q (it=it@entry=0x36be00 <crawlers+9792>) at items.c:1883
+1883	            it->prev->next = it;
+Continuing.
+
+Thread 5 hit Watchpoint 4: (char[128]) *0x10003effe00
+
+Old value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 55 times>, "\276\066\000\000\000\000\000D8\357\003\000\001\000\000\000\000\000\000\000\000\000\000\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+New value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000D8\357\003\000\001\000\000\000\000\000\000\000\000\000\000\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+do_item_crawl_q (it=it@entry=0x36be00 <crawlers+9792>) at items.c:1872
+1872	            it->next->prev = it->prev;
+Continuing.
+
+Thread 5 hit Watchpoint 4: (char[128]) *0x10003effe00
+
+Old value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000D8\357\003\000\001\000\000\000\000\000\000\000\000\000\000\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+New value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000\000\276\066", '\000' <repeats 13 times>, "\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+do_item_crawl_q (it=it@entry=0x36be00 <crawlers+9792>) at items.c:1882
+1882	        if (it->prev) {
+Continuing.
+
+Thread 5 hit Watchpoint 4: (char[128]) *0x10003effe00
+
+Old value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000\000\276\066", '\000' <repeats 13 times>, "\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+New value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000\000\276\066", '\000' <repeats 13 times>, "\203\004\000\000\000\000\000\000\002\001\000\000\002\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+0x00000000001376f9 in item_crawler_thread (arg=<optimized out>) at crawler.c:404
+404	            if (refcount_incr(search) != 2) {
+Continuing.
+
+Thread 5 hit Watchpoint 4: (char[128]) *0x10003effe00
+
+Old value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000\000\276\066", '\000' <repeats 13 times>, "\203\004\000\000\000\000\000\000\002\001\000\000\002\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+New value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000\000\276\066", '\000' <repeats 13 times>, "\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+crawler_expired_eval (cm=<optimized out>, search=0x10003effe44, hv=2931485079, i=<optimized out>) at crawler.c:226
+226	            s->noexp++;
+Continuing.
+
+Thread 5 hit Watchpoint 4: (char[128]) *0x10003effe00
+
+Old value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000\000\276\066", '\000' <repeats 13 times>, "\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+New value = 'x' <repeats 12 times>, "\r\n", '\000' <repeats 54 times>, "\304\066\357\003\000\001\000\000D8\357\003\000\001\000\000\000\000\000\000\000\000\000\000\203\004\000\000\000\000\000\000\002\001\000\000\001\000\000C\210\017\000\000\000\000\000\000\026)\000\000\000\000\000\000memt"
+do_item_crawl_q (it=it@entry=0x36be00 <crawlers+9792>) at items.c:1878
+1878	        it->next = it->prev;
+Continuing.
+
+Thread 1 received signal SIGABRT, Aborted.
+[Switching to Thread 627]
+__GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+Continuing.
+
+Program terminated with signal SIGABRT, Aborted.
+The program no longer exists.
