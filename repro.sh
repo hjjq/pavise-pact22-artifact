@@ -125,7 +125,7 @@ echo "Reproducing real applications in 3 seconds..."
 sleep 3
 
 ##################################################
- Setup for real applications
+# Setup for real applications
 ##################################################
 ### Build vacation PMDK (WHISPER)
 echo "======================================="
@@ -388,7 +388,7 @@ popd
 
 
 ##################################################
- Preproduce memcached-L  + Pavise conservative
+# Preproduce memcached-L  + Pavise conservative
 ##################################################
 echo "======================================="
 echo "Preproducing memcached-L + Pavise conservative tracking"
@@ -456,4 +456,58 @@ kill $PID_redis
 sleep 3 # make sure the server is fully terminated
 echo "Finished running redis."
 popd
+
+##################################################
+# Preproduce memcached-L  + no Pavise 
+##################################################
+# Edit PMDK user.mk
+printf "CC=clang
+CXX=clang++
+EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager" > $PAVISE_ROOT/pmdk-1.10-no_pavise/user.mk
+# Modify LD_LIBRARY_PATH to use PMDK without Pavise
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10-no_pavise/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10-no_pavise/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+### Recompile PMDK with new pass
+echo "Recompiling PMDK with new pass... (~3 min)" 
+pushd $PAVISE_ROOT/pmdk-1.10-no_pavise
+make clean -j &> /dev/null
+make -j &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! PMDK build failed." 
+    exit 1
+fi
+echo "Pavise compilation finished successfully."
+popd 
+
+
+#### Preproduce memcached-L  + no Pavise
+echo "======================================="
+echo "Preproducing memcached-L + no Pavise"
+# Use PMDK with no pavise
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10-no_pavise/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10-no_pavise/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
+### Build memcached-L
+echo "Building memcached-L..."
+pushd $PAVISE_ROOT/apps-no_pavise/memcached-pmem
+make -j  &> /dev/null
+if [ $? -ne 0 ];
+then
+    echo "ERROR! memcached-L build failed."
+    exit 1
+fi
+echo "memcached-L compilation finished successfully."
+popd
+### Run memcached-L
+echo "Running memcached-L with no pavise"
+pushd $PAVISE_ROOT/apps-no_pavise/memcached-pmem
+rm -rf /pmem0p1/kevin/pools/*
+./memcached -u root -m 0 -t 1 -o pslab_file=/pmem0p1/kevin/pools/memcached-l,pslab_force &
+PID_memcached_L=$!
+sleep 5 # make sure the server is fully started
+echo "Starting memcached-L client..."
+memtier_benchmark -p 11211 -P memcache_binary -n 100000 --ratio=1:0 -d 256 -t 1 &> $PAVISE_ROOT/results/memcached-L_no_pavise
+kill $PID_memcached_L
+sleep 3 # make sure the server is fully terminated
+echo "Finished running memcached-L."
+popd
+
 
