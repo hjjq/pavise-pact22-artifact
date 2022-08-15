@@ -1398,7 +1398,9 @@ void pavise_redo_process(){
             }
             prev = shadow;
         }
-        redo_list_coal.push_back(std::make_tuple(start_addr,coal_size));
+        if(redo_list.size() > 0){
+            redo_list_coal.push_back(std::make_tuple(start_addr,coal_size));
+        }
 
         
         //for(auto it = redo_list_coal.begin(); it != redo_list_coal.end();it++){
