@@ -13,8 +13,11 @@ Figure 11 is our major result. To reproduce them:
 ```bash
 git clone git@github.com:kevins981/pavise-pact22-tmp.git
 cd pavise-pact22-tmp
-screen # run experiments using screen to prevent progress loss
-source repro.sh # repro.sh runs all key experiments
+# run experiments using screen to prevent progress loss.
+# if for some reason the screen session is disconnected, use screen -r to reattach to the session
+screen 
+# repro.sh runs all key experiments
+source repro.sh 
 # "All experiments reproduced successfully" indicates completion
 ```
 After `repro.sh` completes, the experiment results will be placed in `$PAVISE_ROOT/results`
