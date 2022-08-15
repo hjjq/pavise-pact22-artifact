@@ -5,7 +5,9 @@ Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications
 > Han Jie Qiu, Sihang Liu, Xinyang Song, Samira Khan, Gennady Pekhimenko
 > 31th International Conference on Parallel Architectures and Compilation Techniques (PACT), 2022
 
-To reproduce key results in Figure 11:
+We will provide access to our non-volatile memory server for artifact evaluation.
+
+Figure 11 is our major result. To reproduce them:
 ```
 git clone git@github.com:kevins981/pavise-pact22-tmp.git
 cd pavise-pact22-tmp
