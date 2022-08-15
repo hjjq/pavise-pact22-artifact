@@ -618,10 +618,9 @@ sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-W."
 popd
 
-
-
-
-echo "======================================="
+pushd $PAVISE_ROOT/results
+source collect.sh
+echo "==========================================================="
 echo "All experiments reproduced successfully!"
-echo "======================================="
-
+echo "Please see $PAVISE_ROOT/results/summary.csv for results"
+echo "==========================================================="
