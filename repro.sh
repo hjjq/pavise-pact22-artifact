@@ -97,8 +97,8 @@ popd
 
 ### Preproduce PMDK without Pavise results
 echo "============================================="
-echo "Preproducing Pavise conservative list results"
-# Edit PMDK user.mk to use Pavise conservative tracking pass
+echo "Preproducing PMDK without Pavise results"
+# Edit PMDK user.mk 
 printf "CC=clang
 CXX=clang++
 EXTRA_CFLAGS = -g -Wno-error -fexperimental-new-pass-manager" > $PAVISE_ROOT/pmdk-1.10-no_pavise/user.mk
@@ -117,7 +117,7 @@ fi
 echo "Pavise compilation finished successfully."
 popd 
 ### Run microbenchmarks
-echo "Running microbenchmarks with conservative tracking"
+echo "Running microbenchmarks without Pavise"
 pushd $PAVISE_ROOT/pmdk-1.10-no_pavise/src/benchmarks
 source pact22_repro_microbench_pmdk.sh
 popd
@@ -555,7 +555,7 @@ rm -rf /pmem0p1/kevin/pools/*
 PID_redis=$!
 sleep 5 # make sure the server is fully started
 echo "Starting redis client..."
-memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis-no_pavise
+memtier_benchmark -n 100000 --ratio=1:0 -d 256 &> $PAVISE_ROOT/results/redis_no_pavise
 kill $PID_redis
 sleep 3 # make sure the server is fully terminated
 echo "Finished running redis"
@@ -588,7 +588,7 @@ sleep 5 # make sure the server is fully started
 popd
 pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/libmemcached-1.0.18/clients
 echo "Starting memcached-W client..."
-./memaslap -s 127.0.0.1:11211 -c 4 -x 100000 -T 4 -X 512 -F ./run.cnf -d 1 &> $PAVISE_ROOT/results/memcached-W-no_pavise
+./memaslap -s 127.0.0.1:11211 -c 4 -x 100000 -T 4 -X 512 -F ./run.cnf -d 1 &> $PAVISE_ROOT/results/memcached-W_no_pavise
 kill $PID_memcached
 sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-W."
