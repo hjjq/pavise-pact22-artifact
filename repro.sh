@@ -12,6 +12,7 @@ export pushd popd
 
 source setup.sh
 echo "PAVISE_ROOT = $PAVISE_ROOT"
+
 ### Compile ISA-L
 echo "======================================="
 echo "Compiling ISA-L... (~ mins)"
@@ -477,10 +478,7 @@ then
 fi
 echo "PMDK compilation finished successfully."
 popd
-
-##################################################
-# Preproduce memcached-L  + no Pavise 
-##################################################
+### Compile PMDK with no pavise
 # Edit PMDK user.mk
 printf "CC=clang
 CXX=clang++
@@ -500,8 +498,34 @@ fi
 echo "Pavise compilation finished successfully."
 popd 
 
+##################################################
+# Preproduce vacation + no Pavise 
+##################################################
+echo "======================================="
+echo "Preproducing vacation + no Pavise"
+### Build vacation
+echo "Building vacation..."
+pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/vacation-pmdk
+bash compile.sh  &> /dev/null
+if [ $? -ne 0 ]; 
+then 
+    echo "ERROR! vacaction build failed." 
+    exit 1
+fi
+echo "vacation compilation finished successfully."
+popd
+### Run vacation
+echo "Running vacation without pavise"
+pushd $PAVISE_ROOT/apps-no_pavise/mod-single-repo/vacation-pmdk/build
+rm -rf /pmem0p1/kevin/pools/*
+./vacation /pmem0p1/kevin/pools/vacation -r100000 -t200000 -n1 -q55 -u99 &> $PAVISE_ROOT/results/vacation_no_pavise
+echo "Finished running vacation."
+popd
 
-#### Preproduce memcached-L  + no Pavise
+
+##################################################
+# Preproduce memcached-L  + no Pavise 
+##################################################
 echo "======================================="
 echo "Preproducing memcached-L + no Pavise"
 # Use PMDK with no pavise
@@ -593,3 +617,11 @@ kill $PID_memcached
 sleep 3 # make sure the server is fully terminated
 echo "Finished running memcached-W."
 popd
+
+
+
+
+echo "======================================="
+echo "All experiments reproduced successfully!"
+echo "======================================="
+
