@@ -35,3 +35,5 @@ for bench in hashmap_atomic hashmap_tx ctree btree rbtree rtree; do
     done
 done
 
+cp ${dir_name}/${csv_name}.csv $PAVISE_ROOT/results
+
