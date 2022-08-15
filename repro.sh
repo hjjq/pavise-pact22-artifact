@@ -164,6 +164,8 @@ popd
 ### Preproduce vacation  + Pavise ignore list
 echo "======================================="
 echo "Preproducing vacation + Pavise ignore list"
+# Modify LD_LIBRARY_PATH 
+export LD_LIBRARY_PATH=$PAVISE_ROOT/pmdk-1.10/src/nondebug:$PAVISE_ROOT/build/lib:$PAVISE_ROOT/isa-l/lib:$PAVISE_ROOT/pmdk-1.10/src/examples/libpmemobj/hashmap:/usr/local/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu
 # Edit PMDK user.mk to use Pavise ignorelist pass
 printf "CC=clang 
 CXX=clang++
