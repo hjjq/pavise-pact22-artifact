@@ -1,5 +1,6 @@
 TODO: move this repo to a new public repo and update remove link below
 
+TODO: memcached-L mismatch
 # Artifact repository for Pavise
 
 Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications
@@ -20,7 +21,7 @@ screen
 source repro.sh 
 # "All experiments reproduced successfully" indicates completion
 ```
-After `repro.sh` completes, the experiment results will be placed in `$PAVISE_ROOT/results`
+After `repro.sh` completes, the experiment results will be placed in `$PAVISE_ROOT/results`, where `$PAVISE_ROOT` is the root directory of the git repository.
 
 `$PAVISE_ROOT/results/summary.csv` summarizes the results of all experiments. To view the results of each individual experiment, please see the rest of the files in `$PAVISE_ROOT/results`:
 
@@ -35,4 +36,28 @@ After `repro.sh` completes, the experiment results will be placed in `$PAVISE_RO
 
 
 ![alt text](https://github.com/kevins981/pavise-pact22-tmp/blob/main/fig11.png)
+
+## Summary CSV Format
+`$PAVISE_ROOT/results/summary.csv` will have the format as shown below. Note that in Figure 11, all bars are plotted as relative runtime to the Original Appplication. 
+For applications that measure throughput (redis, memcached-L, memcached-W), the relative runtime is computed using the inverse of the measured throughput. 
+E.g. relative runtime of Pavise-ignore-list redis = (Original Appplication throughput) / (Pavise-ignore-list throughput)
+
+Runtime applications (lower is better) 
+|benchmark  | Pavise-ignore-list runtime(s) | Pavise-conservative|Original Appplication
+| ------------- | ------------- | ------------- | ------------- |		
+|hashmap_atomic|19.921474|25.126959|10.527226|
+|hashmap_tx|8.573652|10.705328|6.090657|
+|ctree|8.632038|11.064522|5.503845|
+|btree|7.677068|8.916856|3.266477|
+|rbtree|17.290886|19.553796|7.733091|
+|rtree|25.154142|27.932917|6.111267|
+|vacation|5135|6179|1928|
+
+Throughput applications (higher is better)
+|benchmark|Pavise-ignore-list throughput|Pavise-conservative|Original Appplication|
+| ------------- | ------------- | ------------- | ------------- |		
+|redis|15856.88|11927.03|29528.63|
+|memcached-L|15848.01|15844.94|25623.63|
+|memcached-W|12.3|9.3|22.0|
+
 
