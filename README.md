@@ -15,6 +15,7 @@ git clone git@github.com:kevins981/pavise-pact22-tmp.git
 cd pavise-pact22-tmp
 screen # run experiments using screen to prevent progress loss
 source repro.sh # repro.sh runs all key experiments
+# "All experiments reproduced successfully" indicates completion
 ```
 After `repro.sh` completes, the experiment results will be placed in `$PAVISE_ROOT/results`
 
