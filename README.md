@@ -1,3 +1,5 @@
+TODO: move this repo to a new public repo and update remove link below
+
 # Artifact repository for Pavise
 
 Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications
@@ -8,13 +10,15 @@ Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications
 We will provide access to our non-volatile memory server for artifact evaluation.
 
 Figure 11 is our major result. To reproduce them:
-```
+```bash
 git clone git@github.com:kevins981/pavise-pact22-tmp.git
 cd pavise-pact22-tmp
-screen 
-source repro.sh
+screen # run experiments using screen to prevent progress loss
+source repro.sh # repro.sh runs all key experiments
 ```
-After all experiments are reproduced, the results will be placed in `$PAVISE_ROOT/results`
+After `repro.sh` completes, the experiment results will be placed in `$PAVISE_ROOT/results`
+
+`$PAVISE_ROOT/results/summary.csv` summarizes the results of all experiments. To view the results of each individual experiment, please see the rest of the files in `$PAVISE_ROOT/results`:
 
 | File in `$PAVISE_ROOT/results`  | Corresponding results in Figure 11 |
 | ------------- | ------------- |
