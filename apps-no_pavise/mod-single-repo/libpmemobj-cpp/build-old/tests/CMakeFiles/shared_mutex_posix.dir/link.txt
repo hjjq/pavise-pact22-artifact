@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wpointer-arith -Wunused-macros -Wsign-conversion -Wsign-compare -fno-common -g -ggdb -DDEBUG  -rdynamic CMakeFiles/shared_mutex_posix.dir/shared_mutex_posix/shared_mutex_posix.cpp.o  -o shared_mutex_posix  -L/usr/local/lib64 -Wl,-rpath,/usr/local/lib64 -lpmemobj -lpthread libtest_backtrace.a libvalgrind_internal.a 

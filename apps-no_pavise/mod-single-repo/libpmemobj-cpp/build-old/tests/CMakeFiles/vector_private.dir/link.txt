@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wpointer-arith -Wunused-macros -Wsign-conversion -Wsign-compare -fno-common -g -ggdb -DDEBUG  -rdynamic CMakeFiles/vector_private.dir/vector_private/vector_private.cpp.o  -o vector_private  -L/usr/local/lib64 -Wl,-rpath,/usr/local/lib64 -lpmemobj -lpthread libtest_backtrace.a libvalgrind_internal.a 

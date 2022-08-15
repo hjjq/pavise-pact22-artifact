@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/swapnilh/pmdk-stuff/libpmemobj-cpp/tests/test_backtrace.c
+errno.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+signal.h
+-
+test_backtrace.h
+/home/swapnilh/pmdk-stuff/libpmemobj-cpp/tests/test_backtrace.h
+libunwind.h
+-
+dlfcn.h
+-
+execinfo.h
+-
+windows.h
+-
+assert.h
+-
+tchar.h
+-
+DbgHelp.h
+-
+
+/home/swapnilh/pmdk-stuff/libpmemobj-cpp/tests/test_backtrace.h
+

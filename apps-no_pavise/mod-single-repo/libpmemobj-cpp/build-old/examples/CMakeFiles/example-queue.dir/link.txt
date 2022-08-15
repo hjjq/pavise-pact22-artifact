@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wpointer-arith -Wsign-compare -fno-common -g -ggdb -DDEBUG  -rdynamic CMakeFiles/example-queue.dir/queue/queue.cpp.o  -o example-queue  -L/usr/local/lib64 -Wl,-rpath,/usr/local/lib64 -lpmemobj -lpthread 

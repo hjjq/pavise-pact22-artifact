@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wpointer-arith -Wunused-macros -Wsign-conversion -Wsign-compare -fno-common -g -ggdb -DDEBUG  -rdynamic CMakeFiles/pool.dir/pool/pool.cpp.o  -o pool  -L/usr/local/lib64 -Wl,-rpath,/usr/local/lib64 -lpmemobj -lpthread libtest_backtrace.a libvalgrind_internal.a 
