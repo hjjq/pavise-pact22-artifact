@@ -12,7 +12,7 @@ We will provide access to our non-volatile memory server for artifact evaluation
 
 Figure 11 is our major result. To reproduce them:
 ```bash
-git clone git@github.com:kevins981/pavise-pact22-tmp.git
+git clone https://github.com/kevins981/pavise-pact22-tmp.git
 cd pavise-pact22-tmp
 # run experiments using screen to prevent progress loss.
 # if for some reason the screen session is disconnected, use screen -r to reattach to the session
