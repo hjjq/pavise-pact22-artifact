@@ -1,4 +1,4 @@
-# Artifact repository for Pavise
+# Artifact repository for Pavise (PACT22)
 
 Priority data protection for Persistent Memory programs and libraries
 
