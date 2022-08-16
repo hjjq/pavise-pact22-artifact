@@ -1,6 +1,3 @@
-TODO: move this repo to a new public repo and update remove link below
-
-TODO: memcached-L mismatch
 # Artifact repository for Pavise
 
 Pavise: Integrating Fault Tolerance Support for Persistent Memory Applications
